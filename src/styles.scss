@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-display: swap;
+  font-family: 'Anta';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Anta-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JosefinSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JosefinSans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/JosefinSans-Bold.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #F8F5EC;
+  font-family: 'JosefinSans';
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+    background-color: #262e34;
+}
