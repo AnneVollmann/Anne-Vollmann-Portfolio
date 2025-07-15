@@ -1,3 +1,44 @@
+button {
+    padding: 0;
+    color: var(--color-primary);
+
+    &:hover {
+        color: var(--color-white);
+    }
+}
+
 nav {
-    background: #89BCD9;
+    height: 104px;
+    padding: var(--padding-main-primary);
+    background: var(--color-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        //not necessarily this width
+        width: 70px;
+    }
+
+    .menu-links {
+        display: flex;
+        list-style-type: none;
+        gap: 92px;
+
+        button {
+            //22px for burger menu
+            font-size: 26px;
+            font-weight: 500;
+        }
+    }
+
+    .language-selection {
+        width: 64px;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            font-size: 18px;
+        }
+    }
 }

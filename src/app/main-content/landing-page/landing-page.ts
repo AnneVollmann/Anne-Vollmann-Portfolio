@@ -1,12 +1,27 @@
 import { Component } from '@angular/core';
 import { Navbar } from './navbar/navbar';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-landing-page',
-  imports: [Navbar],
+  imports: [CommonModule, Navbar],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss'
 })
-export class LandingPage {
 
+export class LandingPage {
+  socialBtns = [
+    { src: 'assets/icons/button_mail.svg', alt: 'button mail', base: 'button_mail' },
+    { src: 'assets/icons/button_github.svg', alt: 'button github', base: 'button_github' },
+    { src: 'assets/icons/button_linkedin.svg', alt: 'button linkedin', base: 'button_linkedin' }
+  ];
+
+  socialBtnsOnHover(btn: any, hover: boolean) {
+    btn.src = `assets/icons/${btn.base}${hover ? '_hover' : ''}.svg`;
+  }
+
+  //ggf. global
+  arrowOnHover() {
+    
+  }
 }

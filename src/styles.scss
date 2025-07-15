@@ -38,19 +38,84 @@
   src: url('/assets/fonts/JosefinSans-Bold.ttf') format('truetype');
 }
 
+:root {
+  --color-primary: #262E34;
+  --color-secondary: #89BCD9;
+  --color-white: #F8F5EC;
+  --color-grey: #3f464a;
+
+  --padding-main-primary: 0 109px;
+  --padding-main-secondary: 0 290px;
+
+  --fontsize-h1: calc(8.5rem - clamp(3rem, 6.2143rem + -3.5714vw, 5.5rem));
+  --fontsize-h2: calc(5.75rem - clamp(2rem, 4.2500rem + -2.5000vw, 3.75rem));
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color: #F8F5EC;
+  color: var(--color-white);
   font-family: 'JosefinSans';
   font-weight: 400;
+}
+
+section {
+  background-color: var(--color-primary);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--fontsize-h1);
+}
+
+h2 {
+  font-size: var(--fontsize-h2);
+}
+
+span {
+  color: var(--color-secondary);
 }
 
 a {
   text-decoration: none;
 }
 
-section {
-    background-color: #262e34;
+button {
+  padding: 13px 30px;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+.btn-primary {
+  font-size: calc(2rem - clamp(0.875rem, 1.1964rem + -0.3571vw, 1.125rem));
+  border-radius: 30px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+
+  &:hover {
+    background-color: var(--color-white);
+  }
+}
+
+.btn-secondary {
+  font-size: calc(2rem - clamp(0.875rem, 1.1964rem + -0.3571vw, 1.125rem));
+  border-radius: 30px;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+
+  &:hover {
+    background-color: var(--color-grey);
+  }
+}
+
+.arrow {
+  width: 38px;
+  cursor: pointer;
 }
