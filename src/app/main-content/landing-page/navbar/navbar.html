@@ -14,8 +14,8 @@
             <button>Contact</button>
         </li>
     </ul>
-    <div class="language-selection">
-        <button>DE</button>
-        <button>EN</button>
+    <div class="language-selection" (mouseenter)="languageBtnHovered = true" (mouseleave)="languageBtnHovered = false">
+        <button (click)="setLanguage('DE')" [ngClass]="{'btn-current-language': !languageBtnHovered && this.currentLanguage == 'DE'}">DE</button>
+        <button (click)="setLanguage('EN')" [ngClass]="{'btn-current-language': !languageBtnHovered && this.currentLanguage == 'EN'}">EN</button>
     </div>
 </nav>

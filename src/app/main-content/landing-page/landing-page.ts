@@ -16,12 +16,14 @@ export class LandingPage {
     { src: 'assets/icons/button_linkedin.svg', alt: 'button linkedin', base: 'button_linkedin' }
   ];
 
-  socialBtnsOnHover(btn: any, hover: boolean) {
+  arrowBtnHovered = false;
+
+  setSocialBtnHovered(btn: any, hover: boolean) {
     btn.src = `assets/icons/${btn.base}${hover ? '_hover' : ''}.svg`;
   }
 
   //ggf. global
-  arrowOnHover() {
-    
+  setArrowBtnHovered(hover: boolean) {
+    this.arrowBtnHovered = hover;
   }
 }

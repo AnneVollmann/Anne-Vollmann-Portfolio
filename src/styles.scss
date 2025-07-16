@@ -44,8 +44,8 @@
   --color-white: #F8F5EC;
   --color-grey: #3f464a;
 
-  --padding-main-primary: 0 109px;
-  --padding-main-secondary: 0 290px;
+  --padding-main-primary: 0 calc(8.312999999999999rem - clamp(1.5rem, 8.3310rem + -7.5900vw, 6.813rem));
+  --padding-main-secondary:0 calc(19.625rem - clamp(1.5rem, 22.8750rem + -23.7500vw, 18.125rem));
 
   --fontsize-h1: calc(8.5rem - clamp(3rem, 6.2143rem + -3.5714vw, 5.5rem));
   --fontsize-h2: calc(5.75rem - clamp(2rem, 4.2500rem + -2.5000vw, 3.75rem));

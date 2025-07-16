@@ -1,7 +1,7 @@
 <section>
     <div class="anne-vollmann-hero">
         <div class="anne-vollmann-photo">
-            <img class="bg-shape" src="assets/icons/bg_shape1.svg" alt="bg_shape">
+            <img class="bg-shape" src="assets/icons/bg_shape_photo.svg" alt="bg_shape">
             <img class="photo" src="assets/img/anne_vollmann.png" alt="anne_vollmann">
         </div>
 
@@ -9,17 +9,18 @@
             <div class="socials">
                 <img class="logo" src="assets/icons/location.png" alt="anne_vollmann_logo">
                 <div class="btns">
-                    <img *ngFor="let btn of socialBtns" [src]="btn.src" [alt]="btn.alt" (mouseover)="socialBtnsOnHover(btn, true)"
-                        (mouseout)="socialBtnsOnHover(btn, false)">
+                    <img *ngFor="let btn of socialBtns" [src]="btn.src" [alt]="btn.alt" 
+                    (mouseenter)="setSocialBtnHovered(btn, true)"
+                    (mouseleave)="setSocialBtnHovered(btn, false)">
                 </div>
             </div>
             <div class="title">
                 <h1>Anne Vollmann</h1>
                 <p class="title-addition">FRONTEND DEVELOPER</p>
             </div>
-            <button class="arrow" >
-                <img src="assets/icons/arrow.svg" alt="scroll_to_bottom">
-                <img src="assets/icons/arrow_hover.svg" alt="scroll_to_bottom">
+            <button class="arrow" (mouseenter)="setArrowBtnHovered(true)" (mouseleave)="setArrowBtnHovered(false)">
+                <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_bottom">
+                <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_bottom">
             </button>
         </div>
     </div>

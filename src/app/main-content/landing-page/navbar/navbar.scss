@@ -10,6 +10,7 @@ button {
 nav {
     height: 104px;
     padding: var(--padding-main-primary);
+    z-index: 3;
     background: var(--color-secondary);
     display: flex;
     justify-content: space-between;
@@ -21,11 +22,13 @@ nav {
     }
 
     .menu-links {
+        height: 100%;
         display: flex;
         list-style-type: none;
         gap: 92px;
 
         button {
+            height: 100%;
             //22px for burger menu
             font-size: 26px;
             font-weight: 500;
@@ -33,12 +36,20 @@ nav {
     }
 
     .language-selection {
-        width: 64px;
         display: flex;
         justify-content: space-between;
 
         button {
+            padding: 6px 10px;
             font-size: 18px;
         }
     }
+}
+
+.btn-current-language {
+    color: var(--color-white);
+    background-image: url('../../../../../public/assets/icons/bg_shape_nav_language.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
