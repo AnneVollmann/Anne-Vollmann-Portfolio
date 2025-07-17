@@ -1,0 +1,45 @@
+section {
+    padding: var(--padding-main-secondary);
+}
+
+.content {
+    width: 100%;
+    display: flex;
+}
+
+.location-types {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    div {
+        display: flex;
+        align-items: center;
+
+        p {
+            padding-left: 8px;
+            font-size: calc(2.75rem - clamp(1.125rem, 1.7679rem + -0.7143vw, 1.625rem));
+        }
+    }
+}
+
+.self-description {
+    max-width: 380px;
+    flex: 1;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-size: calc(2.25rem - clamp(1rem, 1.3214rem + -0.3571vw, 1.25rem));
+        font-weight: 300;
+    }
+
+    button {
+        width: fit-content;
+        align-self: flex-end;
+        a {
+            color: var(--color-secondary);
+        }
+    }
+}

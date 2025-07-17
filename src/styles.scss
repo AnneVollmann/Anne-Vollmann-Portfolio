@@ -10,6 +10,14 @@
   font-display: swap;
   font-family: 'JosefinSans';
   font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/JosefinSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JosefinSans';
+  font-style: normal;
   font-weight: 400;
   src: url('/assets/fonts/JosefinSans-Regular.ttf') format('truetype');
 }
@@ -58,6 +66,7 @@
   color: var(--color-white);
   font-family: 'JosefinSans';
   font-weight: 400;
+  line-height: 1.2;
 }
 
 section {
@@ -75,7 +84,11 @@ h1 {
 }
 
 h2 {
+  padding-top: 104px;
+  padding-bottom: 80px;
   font-size: var(--fontsize-h2);
+  color: var(--color-secondary);
+  text-align: center;
 }
 
 span {
