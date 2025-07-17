@@ -1,3 +1,12 @@
 <section>
-    <p>my-skills works!</p>
+    <h2>My Skills</h2>
+    <div>
+        <div class="skills">
+            <img *ngFor="let icon of skillIcons" [src]="icon.src" [alt]="icon.alt">
+        </div>
+        <div class="learning">
+            <p>I am currently learning</p>
+            <!-- need to add learning here -->
+        </div>
+    </div>
 </section>

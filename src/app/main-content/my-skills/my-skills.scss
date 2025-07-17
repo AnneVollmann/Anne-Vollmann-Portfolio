@@ -1,0 +1,30 @@
+section {
+    padding: var(--padding-main-secondary);
+
+    > div {
+        display: flex;
+        gap: 80px;
+    }
+}
+
+.skills {
+    max-width: 410px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.learning {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../../public/assets/icons/bg_shape_skills_learning.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &:hover {
+        background-image: url('../../../../public/assets/icons/bg_shape_skills_learning_hover.svg');
+    }
+}
