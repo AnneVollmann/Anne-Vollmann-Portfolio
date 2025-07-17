@@ -1,21 +1,21 @@
 <nav>
     <img class="logo" src="assets/icons/location.png" alt="anne_vollmann_logo">
     <ul class="menu-links">
-        <li>
-            <button>About me</button>
-        </li>
-        <li>
-            <button>Skills</button>
-        </li>
-        <li>
-            <button>Projects</button>
-        </li>
-        <li>
-            <button>Contact</button>
+        <li *ngFor="let btn of navBtns">
+            <button (click)="setSection(btn.href)">
+                <a [ngStyle]="{'color': this.currentSection == btn.href? 'var(--color-white)' : 'var(--color-primary)'}"
+                    href={{btn.href}}>
+                    {{btn.section}}
+                </a>
+                <img [ngStyle]="{'opacity': this.currentSection == btn.href? 1 : 0}"
+                    src="assets/icons/bg_shape_navbar.svg">
+            </button>
         </li>
     </ul>
     <div class="language-selection" (mouseenter)="languageBtnHovered = true" (mouseleave)="languageBtnHovered = false">
-        <button (click)="setLanguage('DE')" [ngClass]="{'btn-current-language': !languageBtnHovered && this.currentLanguage == 'DE'}">DE</button>
-        <button (click)="setLanguage('EN')" [ngClass]="{'btn-current-language': !languageBtnHovered && this.currentLanguage == 'EN'}">EN</button>
+        <button (click)="setLanguage('DE')"
+            [ngClass]="{'btn-current-language': !languageBtnHovered && this.currentLanguage == 'DE'}">DE</button>
+        <button (click)="setLanguage('EN')"
+            [ngClass]="{'btn-current-language': !languageBtnHovered && this.currentLanguage == 'EN'}">EN</button>
     </div>
 </nav>

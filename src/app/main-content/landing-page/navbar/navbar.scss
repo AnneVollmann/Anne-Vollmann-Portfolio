@@ -1,9 +1,10 @@
-button {
+button,
+button a {
     padding: 0;
     color: var(--color-primary);
 
     &:hover {
-        color: var(--color-white);
+        color: var(--color-white) !important;
     }
 }
 
@@ -15,40 +16,62 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
-    .logo {
-        //not necessarily this width
-        width: 70px;
-    }
+.logo {
+    //not necessarily this width
+    width: 70px;
+}
 
-    .menu-links {
-        height: 100%;
+.menu-links {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: center;
+    list-style-type: none;
+
+    li {
+        width: 100%;
         display: flex;
-        list-style-type: none;
-        gap: 92px;
+        justify-content: center;
 
         button {
             height: 100%;
             //22px for burger menu
             font-size: 26px;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+
+            a {
+                position: relative;
+                left: 25%;
+                z-index: 2;
+            }
+
+            img {
+                width: 84px;
+                position: relative;
+                right: 25%;
+            }
         }
     }
+}
 
-    .language-selection {
-        display: flex;
-        justify-content: space-between;
+.language-selection {
+    display: flex;
+    justify-content: space-between;
 
-        button {
-            padding: 6px 10px;
-            font-size: 18px;
-        }
+    button {
+        padding: 6px 10px;
+        font-size: 18px;
     }
 }
 
 .btn-current-language {
     color: var(--color-white);
-    background-image: url('../../../../../public/assets/icons/bg_shape_nav_language.svg');
+    background-image: url('../../../../../public/assets/icons/bg_shape_navbar.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
