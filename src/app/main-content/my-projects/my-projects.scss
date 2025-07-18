@@ -1,0 +1,105 @@
+span {
+    color: var(--color-white);
+    font-size: calc(2rem - clamp(0.875rem, 1.1964rem + -0.3571vw, 1.125rem));
+}
+
+.projects {
+    padding-left: calc(6.375rem - clamp(0rem, 8.1964rem + -9.1071vw, 6.375rem));
+    display: flex;
+
+    li {
+        //different responsive
+        min-width: 160px;
+        height: 97px;
+        padding: 0 calc(2.5rem - clamp(0.25rem, 2.8214rem + -2.8571vw, 2.25rem));
+        display: flex;
+        align-items: center;
+        color: var(--color-secondary);
+        font-size: 30px;
+        font-weight: 500;
+
+        &:hover {
+            color: var(--color-white);
+            cursor: pointer;
+        }
+    }
+}
+
+.current-project {
+    color: var(--color-white) !important;
+    background-color: var(--color-tertiary);
+    border-top-left-radius: calc(3.125rem - clamp(1.25rem, 2.0536rem + -0.8929vw, 1.875rem));
+    border-top-right-radius: calc(3.125rem - clamp(1.25rem, 2.0536rem + -0.8929vw, 1.875rem));
+
+    &:hover {
+        cursor: default !important;
+    }
+}
+
+//mobile padding needs to be adjusted
+.project {
+    padding: var(--padding-main-primary);
+    padding-top: calc(3.5rem - clamp(1.5rem, 2.1429rem + -0.7143vw, 2rem));
+    padding-bottom: 28px;
+    gap: 56px;
+    display: flex;
+    background-color: var(--color-tertiary);
+}
+
+.project-infos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: calc(3.5rem - clamp(1.5rem, 2.1429rem + -0.7143vw, 2rem));
+
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: calc(1.875rem - clamp(0.75rem, 1.2321rem + -0.5357vw, 1.125rem));
+        background-color: var(--color-tertiary);
+
+        .info-header {
+            gap: calc(2.25rem - clamp(0.75rem, 1.7143rem + -1.0714vw, 1.5rem));
+            display: flex;
+            align-items: center;
+            font-size: calc(2.875rem - clamp(1.125rem, 1.9286rem + -0.8929vw, 1.75rem));
+        }
+
+        article {
+            font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
+        }
+    }
+}
+
+.project-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .technologies {
+        gap: 32px;
+        display: flex;
+
+        //remove for mobile, replace with text
+        img {
+            height: 36px;
+            margin-top: 12px;
+        }
+    }
+
+    .placeholder-img {
+        width: calc(45.155rem - clamp(16.813rem, 31.6360rem + -16.4700vw, 28.342rem));
+        margin-top: 16px;
+        border-radius: 30px;
+
+        //remove height and bg-color
+        height: 312px;
+        background-color: var(--color-white);
+    }
+
+    .project-btns {
+        margin-top: 32px;
+        gap: calc(3.5rem - clamp(1rem, 2.9286rem + -2.1429vw, 2.5rem));
+        display: flex;
+    }
+}

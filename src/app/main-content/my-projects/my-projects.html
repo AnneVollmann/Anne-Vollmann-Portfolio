@@ -1,3 +1,61 @@
 <section>
-    <p>my-projects works!</p>
+    <h2>My Projects</h2>
+    <ol class="projects">
+        <li *ngFor="let project of myProjects.projectsDe; let i = index" (click)="setCurrentProject(project.title)"
+            [ngClass]="{'current-project': this.currentProject == project.title}">
+            {{i + 1}}. {{project.title}}
+        </li>
+    </ol>
+    <div class="project">
+        <div class="project-infos">
+            <section>
+                <div class="info-header">
+                    <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
+                    <p>About the project</p>
+                    <span>Duration:</span>
+                </div>
+                <article>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa obcaecati nobis atque
+                    architecto soluta nemo illum, voluptatem asperiores ea laboriosam, delectus reprehenderit
+                    consequatur molestiae minus ducimus, sit ipsa fugit?
+                </article>
+            </section>
+            <section>
+                <div class="info-header">
+                    <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
+                    <p>How i organised my work process</p>
+                </div>
+                <article>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa obcaecati nobis atque
+                    architecto soluta nemo illum, voluptatem asperiores ea laboriosam, delectus reprehenderit
+                    consequatur molestiae minus ducimus, sit ipsa fugit?
+                </article>
+            </section>
+            <section>
+                <div class="info-header">
+                    <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
+                    <p>What i have learned</p>
+                </div>
+                <article>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa obcaecati nobis atque
+                    architecto soluta nemo illum, voluptatem asperiores ea laboriosam, delectus reprehenderit
+                    consequatur molestiae minus ducimus, sit ipsa fugit?
+                </article>
+            </section>
+        </div>
+        <div class="project-overview">
+            <span>Technologies</span>
+            <div class="technologies">
+                <img src="assets/icons/icon_angular_small.svg">
+                <img src="assets/icons/icon_angular_small.svg">
+                <img src="assets/icons/icon_angular_small.svg">
+            </div>
+            <!-- to be replaced with project-img -->
+            <div class="placeholder-img"></div>
+            <div class="project-btns">
+                <button class="btn-primary">Live Test</button>
+                <button class="btn-secondary">GitHub</button>
+            </div>
+        </div>
+    </div>
 </section>
