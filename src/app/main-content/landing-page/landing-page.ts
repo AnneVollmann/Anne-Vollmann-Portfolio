@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { Navbar } from './navbar/navbar';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-landing-page',
-  imports: [CommonModule, Navbar],
+  imports: [CommonModule],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss'
 })

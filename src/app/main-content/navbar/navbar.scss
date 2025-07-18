@@ -16,6 +16,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 .logo {
@@ -71,7 +73,7 @@ nav {
 
 .btn-current-language {
     color: var(--color-white);
-    background-image: url('../../../../../public/assets/icons/bg_shape_navbar.svg');
+    background-image: url('../../../../public/assets/icons/bg_shape_navbar.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
