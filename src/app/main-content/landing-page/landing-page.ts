@@ -18,6 +18,7 @@ export class LandingPage {
 
   arrowBtnHovered = false;
 
+
   setSocialBtnHovered(btn: any, hover: boolean) {
     btn.src = `assets/icons/${btn.base}${hover ? '_hover' : ''}.svg`;
   }

@@ -11,18 +11,24 @@
 
 //different for mobile
 .anne-vollmann-photo {
+    width: 594px;
+    height: 100%;
     padding-top: 22px;
+    transition: all 0.5s ease-in-out;
+    background-image: url('../../../../public/assets/icons/bg_shape_photo.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 
-    .bg-shape {
-        width: 594px;
-        transform: translateY(4%);
+    &:hover {
+        transition: all 0.5s ease-in-out;
+        background-image: url('../../../../public/assets/icons/bg_shape_photo_hover.svg');
     }
 
     .photo {
-        height: 683px;
+        height: 100%;
+        padding-left: 12px;
         z-index: 2;
-        position: absolute;
-        transform: translateX(-112%);
     }
 }
 
