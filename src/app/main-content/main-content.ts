@@ -4,13 +4,13 @@ import { Navbar } from './navbar/navbar';
 import { AboutMe } from "./about-me/about-me";
 import { MySkills } from "./my-skills/my-skills";
 import { MyProjects } from "./my-projects/my-projects";
+import { References } from './references/references';
 import { ContactMe } from "./contact-me/contact-me";
-import { ColleaguesOpinions } from './colleagues-opinions/colleagues-opinions';
 import { Footer } from './footer/footer';
 
 @Component({
   selector: 'app-main-content',
-  imports: [LandingPage, Navbar, AboutMe, MySkills, MyProjects, ColleaguesOpinions, ContactMe, Footer],
+  imports: [LandingPage, Navbar, AboutMe, MySkills, MyProjects, References, ContactMe, Footer],
   templateUrl: './main-content.html',
   styleUrl: './main-content.scss'
 })
