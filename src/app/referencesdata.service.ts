@@ -11,13 +11,13 @@ export class ReferencesdataService {
         {
             name: 'a',
             project: 'a',
-            quote: 'a',
+            quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             linkedin: ''
         },
         {
             name: 'b',
             project: 'b',
-            quote: 'b',
+            quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             linkedin: ''
         }
     ]

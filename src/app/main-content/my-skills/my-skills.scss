@@ -19,12 +19,14 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease-in-out;
     background-image: url('../../../../public/assets/icons/bg_shape_skills_learning.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
     &:hover {
+        transition: all 0.5s ease-in-out;
         background-image: url('../../../../public/assets/icons/bg_shape_skills_learning_hover.svg');
     }
 }

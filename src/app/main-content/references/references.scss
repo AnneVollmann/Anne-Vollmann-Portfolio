@@ -4,8 +4,10 @@ h2 {
 }
 
 .references {
+    padding: var(--padding-main-primary);
     display: flex;
-
+    justify-content: center;
+    gap: 12px;
 }
 
 .reference {
@@ -15,12 +17,41 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s ease-in-out;
     background-image: url('../../../../public/assets/icons/bg_shape_references.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
     &:hover {
+        transition: all 0.5s ease-in-out;
         background-image: url('../../../../public/assets/icons/bg_shape_references_hover.svg');
+    }
+
+    .name {
+        padding-bottom: 8px;
+        font-size: calc(3.125rem - clamp(1.5rem, 1.6607rem + -0.1786vw, 1.625rem));
+        font-weight: 600;
+    }
+
+    .project {
+        padding-bottom: calc(2.25rem - clamp(1rem, 1.3214rem + -0.3571vw, 1.25rem));
+        font-size: 18px;
+    }
+
+    .quote {
+        max-width: calc(33.375rem - clamp(13.75rem, 21.3036rem + -8.3929vw, 19.625rem));
+        height: calc(13.125rem - clamp(5.625rem, 8.0357rem + -2.6786vw, 7.5rem));
+        padding-bottom: clamp(1.25rem, 1.5714rem + -0.3571vw, 1.5rem);
+        font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
+        //text left-aligned for mobile
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .linkedin {
+        color: var(--color-secondary);
+        font-size: 16px;
+        text-decoration: underline;
     }
 }
