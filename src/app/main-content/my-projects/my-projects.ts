@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class MyProjects {
   myProjects = inject(ProjectsdataService);
-  currentProject: string = 'Join';
+  currentProjectIndex = 0;
 
-  setCurrentProject(project:string) {
-    this.currentProject = project;
+  setCurrentProject(index: Number) {
+    this.currentProjectIndex = Number(index);
   }
 }
