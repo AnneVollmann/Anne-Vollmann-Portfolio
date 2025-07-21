@@ -1,3 +1,14 @@
 <footer>
-    <p>footer works!</p>
+    <div class="legals">
+        <a>Legal notice</a>
+        <p>© Anne Vollmann 2025</p>
+    </div>
+    <div class="logo">
+        <img src="assets/icons/location.png" alt="anne_vollmann_logo">
+    </div>
+    <div class="social-btns">
+        <!-- different img for mobile -->
+        <img *ngFor="let btn of socialBtns" [src]="btn.hover? btn.srcBase+'_dark_hover.svg': btn.srcBase+'_dark.svg'"
+            [alt]="btn.alt" (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
+    </div>
 </footer>

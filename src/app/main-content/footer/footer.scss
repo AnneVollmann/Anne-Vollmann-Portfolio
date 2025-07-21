@@ -1,4 +1,42 @@
 footer {
-    // padding-top: 180px;
-    background: #89BCD9;
+    //different for mobile
+    height: 214px;
+    margin-top: calc(17.75rem - clamp(6.5rem, 12.6574rem + -7.0370vw, 11.25rem));
+    padding: var(--padding-main-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-secondary);
+}
+
+.legals {
+    // for mobile: 32px gab, row
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+
+    a,
+    p {
+        color: var(--color-primary) !important;
+        // for mobile 14px
+        font-size: 18px;
+        filter: opacity(0.8);
+    }
+
+    a:hover {
+        color: var(--color-white) !important;
+    }
+}
+
+.logo {}
+
+.social-btns {
+    display: flex;
+    gap: 16px;
+
+    img {
+        width: 30px;
+        cursor: pointer;
+        filter: opacity(0.8);
+    }
 }

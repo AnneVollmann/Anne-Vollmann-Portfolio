@@ -6,10 +6,12 @@
 
         <div class="anne-vollmann-headline">
             <div class="socials">
-                <img class="logo" src="assets/icons/location.png" alt="anne_vollmann_logo">
-                <div class="btns">
-                    <img *ngFor="let btn of socialBtns" [src]="btn.src" [alt]="btn.alt"
-                        (mouseenter)="setSocialBtnHovered(btn, true)" (mouseleave)="setSocialBtnHovered(btn, false)">
+                <div class="logo" >
+                    <img src="assets/icons/location.png" alt="anne_vollmann_logo">
+                </div>
+                <div class="social-btns">
+                    <img *ngFor="let btn of socialBtns" [src]="btn.hover? btn.srcBase+'_hover.svg': btn.srcBase+'.svg'"
+                        [alt]="btn.alt" (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
                 </div>
             </div>
             <div class="title">
