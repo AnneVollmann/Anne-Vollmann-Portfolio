@@ -8,10 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './contact-me.scss'
 })
 export class ContactMe {
+  arrowBtnHovered = false;
   mailHovered = false;
   phoneHovered = false;
   checkboxHovered = false;
   checkboxChecked = false;
+
+  setArrowBtnHovered(hover: boolean) {
+    this.arrowBtnHovered = hover;
+  }
 
   checkInput(id: string) {
     return;

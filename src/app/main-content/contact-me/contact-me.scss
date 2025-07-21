@@ -1,4 +1,16 @@
-// @import '../main-content.scss';
+.arrow-container {
+    height: 0;
+    position: relative;
+    top: 104px;
+    padding: var(--padding-main-primary);
+    justify-self: flex-end;
+
+    .arrow {
+        img {
+            transform: rotate(180deg);
+        }
+    }
+}
 
 //different for mobile (gaps remain the size)
 .contact-overview {

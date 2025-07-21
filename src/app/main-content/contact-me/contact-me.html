@@ -1,4 +1,11 @@
 <section>
+    <div class="arrow-container">
+        <a href="#landingPage" (mouseenter)="setArrowBtnHovered(true)" (mouseleave)="setArrowBtnHovered(false)"
+            class="arrow">
+            <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_bottom">
+            <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_bottom">
+        </a>
+    </div>
     <h2>Contact me</h2>
     <div class="contact-overview">
         <p class="open-for">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt facilis consectetur,
