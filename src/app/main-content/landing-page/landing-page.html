@@ -18,7 +18,7 @@
                 <h1>Anne Vollmann</h1>
                 <p class="title-addition">FRONTEND DEVELOPER</p>
             </div>
-            <a href="#contact" (mouseenter)="setArrowBtnHovered(true)" (mouseleave)="setArrowBtnHovered(false)"
+            <a href="#contact" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
                 class="arrow">
                 <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_bottom">
                 <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_bottom">

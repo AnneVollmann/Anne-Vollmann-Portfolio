@@ -1,6 +1,6 @@
 <section>
     <div class="arrow-container">
-        <a href="#landingPage" (mouseenter)="setArrowBtnHovered(true)" (mouseleave)="setArrowBtnHovered(false)"
+        <a href="#landingPage" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
             class="arrow">
             <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_bottom">
             <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_bottom">
@@ -26,7 +26,7 @@
             </p>
         </div>
     </div>
-    <form>
+    <form (ngSubmit)="onSubmit()">
         <section class="sender">
             <div>
                 <label for="name">Your name <span>is required</span></label>
@@ -50,7 +50,7 @@
                         outlined.</p>
                 </div>
             </div>
-            <button (click)="submitMessage()" class="btn-secondary"
+            <button class="btn-secondary"
                 [disabled]="checkboxChecked? false: true">Send</button>
         </div>
     </form>

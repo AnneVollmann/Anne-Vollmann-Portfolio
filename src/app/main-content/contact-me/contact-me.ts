@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss'
 })
@@ -14,15 +15,14 @@ export class ContactMe {
   checkboxHovered = false;
   checkboxChecked = false;
 
-  setArrowBtnHovered(hover: boolean) {
-    this.arrowBtnHovered = hover;
-  }
+  nameError = false;
+  mailError = false;
+  messageError = false;
+  checkboxError = false;
 
-  checkInput(id: string) {
-    return;
-  }
+  checkInput(field: string) {}
 
-  submitMessage() {
-    return;
+  onSubmit() {
+    console.log(1)
   }
 }

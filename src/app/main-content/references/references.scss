@@ -11,8 +11,12 @@ h2 {
 }
 
 .reference {
-    height: calc(43.125rem - clamp(18.125rem, 26.9643rem + -9.8214vw, 25rem));
-    width: calc(43.125rem - clamp(18.125rem, 26.9643rem + -9.8214vw, 25rem));
+    //height: calc(43.125rem - clamp(18.125rem, 26.9643rem + -9.8214vw, 25rem));
+    //width: calc(43.125rem - clamp(18.125rem, 26.9643rem + -9.8214vw, 25rem));
+    height: 500px;
+    width: 500px;
+    padding-top: 24px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,16 +44,18 @@ h2 {
     }
 
     .quote {
-        max-width: calc(33.375rem - clamp(13.75rem, 21.3036rem + -8.3929vw, 19.625rem));
-        height: calc(13.125rem - clamp(5.625rem, 8.0357rem + -2.6786vw, 7.5rem));
-        padding-bottom: clamp(1.25rem, 1.5714rem + -0.3571vw, 1.5rem);
+        //max-width: calc(33.375rem - clamp(13.75rem, 21.3036rem + -8.3929vw, 19.625rem));
+        width: 420px;
+        //height: calc(13.125rem - clamp(5.625rem, 8.0357rem + -2.6786vw, 7.5rem));
+        //height: calc(17.813rem - clamp(7.188rem, 11.6434rem + -5.0919vw, 10.625rem));
         font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
         //text left-aligned for mobile
         text-align: center;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .linkedin {
+        padding-top: 24px;
         color: var(--color-secondary);
         font-size: 16px;
         text-decoration: underline;
