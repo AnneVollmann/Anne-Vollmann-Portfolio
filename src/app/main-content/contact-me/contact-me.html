@@ -7,13 +7,14 @@
             vitae, ea fugit libero necessitatibus?
         </p>
         <div class="contact-oportunities">
-            <p>
-                <img src="assets/icons/icon_mail.svg">
-                <!-- mail needs to be inserted -->
+            <p (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false">
+                <img [src]="mailHovered ? 'assets/icons/icon_mail_hover.svg' : 'assets/icons/icon_mail.svg'"
+                    alt="mail icon">
                 E-Mail: ...
             </p>
-            <p>
-                <img src="assets/icons/icon_phone.svg">
+            <p (mouseenter)="phoneHovered = true" (mouseleave)="phoneHovered = false">
+                <img [src]="phoneHovered ? 'assets/icons/icon_phone_hover.svg' : 'assets/icons/icon_phone.svg'"
+                    alt="phone icon">
                 Tel.: (+49) 1573 4850567
             </p>
         </div>
@@ -21,23 +22,29 @@
     <form>
         <section class="sender">
             <div>
-                <label for="name">Your name</label>
-                <input id="name" type="text">
+                <label for="name">Your name <span>is required</span></label>
+                <input (blur)="checkInput('name')" id="name" type="text">
             </div>
             <div>
-                <label for="mail">Your Email</label>
-                <input id="mail" type="text">
+                <label for="mail">Your Email <span>is required</span></label>
+                <input (blur)="checkInput('mail')" id="mail" type="text">
             </div>
         </section>
-        <label for="message">Your Message</label>
-        <textarea id="message"></textarea>
+        <label for="message">Your Message <span>is required</span></label>
+        <textarea (blur)="checkInput('message')" id="message"></textarea>
         <div class="submit">
             <div class="privacy-policy">
-                <input type="checkbox">
-                <p>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.</p>
+                <input type="checkbox" (click)="checkboxChecked = !checkboxChecked"
+                    (mouseenter)="checkboxHovered = true" (mouseleave)="checkboxHovered = false">
+                <div>
+                    <div class="checkbox" [class.checkbox-hovered]="checkboxHovered"
+                        [class.checkbox-checked]="checkboxChecked"></div>
+                    <p>I've read the <a><span>privacy policy</span></a> and agree to the processing of my data as
+                        outlined.</p>
+                </div>
             </div>
-
-            <button class="btn-secondary" [disabled]="true">Send</button>
+            <button (click)="submitMessage()" class="btn-secondary"
+                [disabled]="checkboxChecked? false: true">Send</button>
         </div>
     </form>
 </section>
