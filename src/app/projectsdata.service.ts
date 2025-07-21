@@ -18,7 +18,7 @@ export class ProjectsdataService {
             learnedDe: 'Jeder brachte seine Stärken ein, weshalb meine Aufgabe hauptsächlich in der Implementierung der JavaScript-Funktionen bestand. Merge-Konflikte über Git konnten wir erfolgreich im Team lösen.',
             learnedEn: '',
             technologies: ['javascript', 'css', 'html'],
-            img: '',
+            img: 'assets/img/join.png',
         },
         {
             title: 'Dusky Swamps',
@@ -30,7 +30,7 @@ export class ProjectsdataService {
             learnedDe: 'Durch die Entwicklung meines eigenen Spiels lernte ich, was es ausmacht, objekt-orientiert zu programmieren. Ich stellte mir selbst diverse kleine Aufgaben, wie verschiedene Gegnertypen um besonders viel zu lernen.',
             learnedEn: '',
             technologies: ['javascript', 'css', 'html'],
-            img: '',
+            img: 'assets/img/dusky_swamps.png',
         }
     ]
 }

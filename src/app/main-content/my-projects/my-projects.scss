@@ -87,14 +87,11 @@ span {
         }
     }
 
-    .placeholder-img {
+    .project-img {
         width: calc(45.155rem - clamp(16.813rem, 31.6360rem + -16.4700vw, 28.342rem));
+        min-height: 312px;
         margin-top: 16px;
         border-radius: 30px;
-
-        //remove height and bg-color
-        height: 312px;
-        background-color: var(--color-white);
     }
 
     .project-btns {

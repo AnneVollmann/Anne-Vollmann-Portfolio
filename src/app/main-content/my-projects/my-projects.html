@@ -42,8 +42,7 @@
             <div class="technologies">
                 <img *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index" src="assets/icons/icon_{{technology}}_small.svg">
             </div>
-            <!-- to be replaced with project-img -->
-            <div class="placeholder-img"></div>
+            <img class="project-img" src="{{myProjects.projects[currentProjectIndex].img}}" alt="{{myProjects.projects[currentProjectIndex].title}} image">
             <div class="project-btns">
                 <button class="btn-primary">Live Test</button>
                 <button class="btn-secondary">GitHub</button>
