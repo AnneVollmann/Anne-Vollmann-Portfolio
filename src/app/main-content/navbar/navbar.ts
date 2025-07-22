@@ -1,5 +1,5 @@
 import { CommonModule, NgClass, NgStyle } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,18 +9,20 @@ import { Component } from '@angular/core';
 })
 export class Navbar {
   navBtns = [
-    {section: 'About me', href: '#about'},
-    {section: 'Skills', href: '#skills'},
-    {section: 'Projects', href: '#projects'},
-    {section: 'Contact', href: '#contact'},
+    {sectionDe: 'Über mich', sectionEn: 'About me', href: '#about'},
+    {sectionDe: 'Skills', sectionEn: 'Skills', href: '#skills'},
+    {sectionDe: 'Projekte', sectionEn: 'Projects', href: '#projects'},
+    {sectionDe: 'Kontakt', sectionEn: 'Contact', href: '#contact'},
   ];
-
+  currentSection = '';
   languageBtnHovered = false;
   currentLanguage = 'DE';
-  currentSection = '';
+
+  @Output()language = new EventEmitter<string>();
 
   setLanguage(language: string) {
     this.currentLanguage = language;
+    this.language.emit(this.currentLanguage);
   }
 
   setSection(section: string) {

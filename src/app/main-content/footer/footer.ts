@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './footer.scss'
 })
 export class Footer {
+  @Input()language = 'DE';
+
   //insert correct mail
   socialBtns = [
     { srcBase: 'assets/icons/button_mail', alt: 'mailBtn', hover: false, href:''},

@@ -5,7 +5,7 @@
             <button (click)="setSection(btn.href)">
                 <a [ngStyle]="{'color': this.currentSection == btn.href? 'var(--color-white)' : 'var(--color-primary)'}"
                     href={{btn.href}}>
-                    {{btn.section}}
+                    {{currentLanguage == 'DE'? btn.sectionDe: btn.sectionEn}}
                 </a>
                 <img [ngStyle]="{'opacity': this.currentSection == btn.href? 1 : 0}"
                     src="assets/icons/bg_shape_navbar.svg">

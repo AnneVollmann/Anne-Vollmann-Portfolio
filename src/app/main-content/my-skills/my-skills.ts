@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './my-skills.scss'
 })
 export class MySkills {
+  @Input()language = 'DE';
+
   skillIcons = [
     {src: 'assets/icons/icon_angular.svg', alt: 'Angular'},
     {src: 'assets/icons/icon_typescript.svg', alt: 'TypeScript'},

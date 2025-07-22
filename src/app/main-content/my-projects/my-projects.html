@@ -1,5 +1,5 @@
 <section>
-    <h2>My Projects</h2>
+    <h2>{{language == 'DE'? 'Meine Projekte': 'My Projects'}}</h2>
     <ol class="projects">
         <li *ngFor="let project of myProjects.projects; let i = index" (click)="setCurrentProject(i)"
             [ngClass]="{'current-project': this.currentProjectIndex == i}">
@@ -11,45 +11,45 @@
             <section *ngIf="myProjects.projects[currentProjectIndex].aboutDe !== ''">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
-                    <p>About the project</p>
+                    <p>{{language == 'DE'? 'Über das Projekt': 'About the project'}}</p>
                     <span *ngIf="myProjects.projects[currentProjectIndex].durationWeeks !== ''">
-                        Duration: {{myProjects.projects[currentProjectIndex].durationWeeks}} weeks
+                        {{language == 'DE'? 'Dauer': 'Duration'}}: {{myProjects.projects[currentProjectIndex].durationWeeks}} {{language == 'DE'? 'Wochen': 'weeks'}}
                     </span>
                 </div>
                 <article>
-                    {{myProjects.projects[currentProjectIndex].aboutDe}}
+                    {{language == 'DE'? myProjects.projects[currentProjectIndex].aboutDe : myProjects.projects[currentProjectIndex].aboutEn}}
                 </article>
             </section>
             <section *ngIf="myProjects.projects[currentProjectIndex].organizationDe !== ''">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
-                    <p>How i organised my work process</p>
+                    <p>{{language == 'DE'? 'Wie ich meinen Arbeitsablauf organisiert habe': 'How i organised my work process'}}</p>
                 </div>
                 <article>
-                    {{myProjects.projects[currentProjectIndex].organizationDe}}
+                    {{language == 'DE'? myProjects.projects[currentProjectIndex].organizationDe: myProjects.projects[currentProjectIndex].organizationEn}}
                 </article>
             </section>
             <section *ngIf="myProjects.projects[currentProjectIndex].groupWorkDe !== ''">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
-                    <p>My group work experience</p>
+                    <p>{{language == 'DE'? 'Meine Erfahrungen in der Gruppenarbeit': 'My group work experience'}}</p>
                 </div>
                 <article>
-                    {{myProjects.projects[currentProjectIndex].groupWorkDe}}
+                    {{language == 'DE'? myProjects.projects[currentProjectIndex].groupWorkDe: myProjects.projects[currentProjectIndex].groupWorkEn}}
                 </article>
             </section>
             <section *ngIf="myProjects.projects[currentProjectIndex].learnedDe !== ''">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
-                    <p>What i have learned</p>
+                    <p>{{language == 'DE'? 'Was ich gelernt habe': 'What i have learned'}}</p>
                 </div>
                 <article>
-                    {{myProjects.projects[currentProjectIndex].learnedDe}}
+                    {{language == 'DE'? myProjects.projects[currentProjectIndex].learnedDe: myProjects.projects[currentProjectIndex].learnedEn}}
                 </article>
             </section>
         </div>
         <div class="project-overview">
-            <span>Technologies</span>
+            <span>{{language == 'DE'? 'Technologien': 'Technologies'}}</span>
             <div class="technologies">
                 <img *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index" src="assets/icons/icon_{{technology}}_small.svg">
             </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { LandingPage } from './landing-page/landing-page';
 import { Navbar } from './navbar/navbar';
 import { AboutMe } from "./about-me/about-me";
@@ -15,5 +15,11 @@ import { Footer } from './footer/footer';
   styleUrl: './main-content.scss'
 })
 export class MainContent {
+  currentLanguage: string = 'DE';
+  @Output()language = new EventEmitter<string>();
 
+  setLanguage(language:string) {
+    this.currentLanguage = language;
+    this.language.emit(this.currentLanguage);
+  }
 }

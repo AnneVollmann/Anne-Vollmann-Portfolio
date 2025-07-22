@@ -1,8 +1,8 @@
-<app-landing-page id="landingPage"></app-landing-page>
-<app-navbar></app-navbar>
-<app-about-me id="about"></app-about-me>
-<app-my-skills id="skills"></app-my-skills>
-<app-my-projects id="projects"></app-my-projects>
-<app-references></app-references>
-<app-contact-me id="contact"></app-contact-me>
-<app-footer></app-footer>
+<app-landing-page [language]="this.currentLanguage" id="landingPage"></app-landing-page>
+<app-navbar (language)="setLanguage($event)"></app-navbar>
+<app-about-me [language]="this.currentLanguage" id="about"></app-about-me>
+<app-my-skills [language]="this.currentLanguage" id="skills"></app-my-skills>
+<app-my-projects [language]="this.currentLanguage" id="projects"></app-my-projects>
+<app-references [language]="this.currentLanguage"></app-references>
+<app-contact-me [language]="this.currentLanguage" id="contact"></app-contact-me>
+<app-footer [language]="this.currentLanguage"></app-footer>

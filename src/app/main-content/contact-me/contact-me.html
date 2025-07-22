@@ -6,12 +6,9 @@
             <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_bottom">
         </a>
     </div>
-    <h2>Contact me</h2>
+    <h2>{{language == 'DE'? 'Kontakt aufnehmen': 'Contact me'}}</h2>
     <div class="contact-overview">
-        <p class="open-for">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt facilis consectetur,
-            dolore velit
-            assumenda voluptate! Quidem maxime sequi molestiae atque quibusdam. Tempora, voluptas! Suscipit nesciunt
-            vitae, ea fugit libero necessitatibus?
+        <p class="open-for">{{language == 'DE'? 'xy': 'xy'}}
         </p>
         <div class="contact-oportunities">
             <!-- insert mail (text, href)-->
@@ -30,15 +27,24 @@
     <form (ngSubmit)="onSubmit()">
         <section class="sender">
             <div>
-                <label for="name">Your name <span>is required</span></label>
+                <label for="name">
+                    {{language == 'DE'? 'Name': 'Your name'}}
+                    <span>{{language == 'DE'? 'ist erforderlich': 'is required'}}</span>
+                </label>
                 <input (blur)="checkInput('name')" id="name" type="text">
             </div>
             <div>
-                <label for="mail">Your Email <span>is required</span></label>
+                <label for="mail">
+                    {{language == 'DE'? 'E-Mail-Adresse': 'Your Email'}}
+                    <span>{{language == 'DE'? 'ist erforderlich':'is required'}}</span>
+                </label>
                 <input (blur)="checkInput('mail')" id="mail" type="text">
             </div>
         </section>
-        <label for="message">Your Message <span>is required</span></label>
+        <label for="message">
+            {{language == 'DE'? 'Nachricht': 'Your Message'}}
+            <span>{{language == 'DE'? 'ist erforderlich': 'is required'}}</span>
+        </label>
         <textarea (blur)="checkInput('message')" id="message"></textarea>
         <div class="submit">
             <div class="privacy-policy">
@@ -47,11 +53,13 @@
                 <div>
                     <div class="checkbox" [class.checkbox-hovered]="checkboxHovered"
                         [class.checkbox-checked]="checkboxChecked"></div>
-                    <p>I've read the <a><span>privacy policy</span></a> and agree to the processing of my data as
-                        outlined.</p>
+                    <p>{{language == 'DE'? 'Ich habe die': 'I’ve read the'}}
+                        <a><span>{{language == 'DE'? 'Datenschutzerklärung ': 'privacy policy'}}</span></a>
+                        {{language == 'DE'? 'gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.': 'and agree to the processing of my data as outlined.'}}
+                    </p>
                 </div>
             </div>
-            <button class="btn-secondary" [disabled]="checkboxChecked? false: true">Send</button>
+            <button class="btn-secondary" [disabled]="checkboxChecked? false: true">{{language == 'DE'? 'Abschicken': 'Send'}}</button>
         </div>
     </form>
 </section>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
 })
 
 export class LandingPage {
+  @Input()language = 'DE';
+
   //insert correct mail
   socialBtns = [
     { srcBase: 'assets/icons/button_mail_blue', alt: 'mailBtn', hover: false, href:''},

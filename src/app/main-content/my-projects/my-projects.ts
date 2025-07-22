@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ProjectsdataService } from '../../projectsdata.service';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './my-projects.scss'
 })
 export class MyProjects {
+  @Input()language = 'DE';
+
   myProjects = inject(ProjectsdataService);
   currentProjectIndex = 0;
 
