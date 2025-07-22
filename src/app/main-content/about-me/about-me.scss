@@ -4,13 +4,14 @@ section {
 
 .content {
     width: 100%;
+    gap: 40px;
     display: flex;
 }
 
 .location-types {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 0.6;
 
     div {
         display: flex;
@@ -35,6 +36,7 @@ section {
 }
 
 .self-description {
+    flex: 0.4;
     max-width: 380px;
     gap: 24px;
     display: flex;
@@ -56,31 +58,23 @@ section {
 }
 
 @keyframes typing {
-    0% {
-        width: 0%;
-    }
 
-    50% {
-        width: 100%;
-    }
-
-    75% {
-        width: 100%;
-    }
-
-    90% {
-        width: 0%;
-    }
-
+    0%,
+    90%,
     100% {
         width: 0%;
+    }
+
+    50%,
+    75% {
+        width: 100%;
     }
 }
 
 @keyframes blink-border {
 
-    from,
-    to {
+    0%,
+    100% {
         border-color: transparent;
     }
 

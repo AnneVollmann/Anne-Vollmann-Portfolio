@@ -4,16 +4,28 @@
         <div class="location-types">
             <div>
                 <img src="assets/icons/location.png" alt="location">
-                <p><span>{{language == 'DE'? 'Ich wohne': 'I am'}} </span>{{language == 'DE'? 'in Dresden': 'located in Dresden'}} <span class="ellipsis">...</span></p>
+                <p>
+                    <span>{{language == 'DE'? 'Ich wohne': 'I am'}} </span>
+                    {{language == 'DE'? 'in Dresden': 'located in Dresden'}} 
+                    <span class="ellipsis">...</span>
+                </p>
             </div>
             <div>
                 <img src="assets/icons/remote.png" alt="remote">
-                <p><span>{{language == 'DE'? 'Ich bin': 'I am'}} </span>{{language == 'DE'? 'offen für Remote-Arbeit': 'open to work remote'}} <span class="ellipsis">...</span></p>
+                <p>
+                    <span>{{language == 'DE'? 'Ich bin': 'I am'}} </span>
+                    {{language == 'DE'? 'offen für Remote-Arbeit': 'open to work remote'}} 
+                    <span class="ellipsis">...</span>
+                </p>
             </div>
         </div>
         <article class="self-description">
-            <p>{{language == 'DE'? 'xy': 'xy'}}</p>
-            <a href="#contact"><button class="btn-secondary">{{language == 'DE'? 'Kontakt aufnehmen': 'Let’s talk'}}</button></a>
+            <p>
+                {{language == 'DE'? 'Als begeisterte Frontend-Entwicklerin zeichnen mich vor allem mein analytisches Denken und meine Problemlösungsstrategien aus.':'As a passionate front-end developer, I’m especially defined by my analytical thinking andproblem-solving strategies.'}}
+                <br>
+                {{language == 'DE'? 'An der Softwareentwicklung liebe ich besonders dasvielfältige Arbeiten an immer neuen Herausforderungen und das Erarbeiten cleverer Lösungen inanspruchsvollen Software-Projekten.':'What I love most about software development is the variety that comes withconstantly tackling new challenges and crafting smart solutions in demanding software projects.'}}
+            </p>
+            <a href="#contact"><button class="btn-secondary">{{language == 'DE'? 'Kontakt': 'Let’s talk'}}</button></a>
         </article>
     </div>
 </section>
