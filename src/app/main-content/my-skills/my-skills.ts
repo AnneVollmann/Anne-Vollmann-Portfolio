@@ -22,4 +22,9 @@ export class MySkills {
     {src: 'assets/icons/icon_materialdesign.svg', alt: 'Material Design'},
     {src: 'assets/icons/icon_scrum.svg', alt: 'Scrum'},
   ]
+
+  learningIcons = [
+    {src: 'assets/icons/icon_react.svg', alt: 'React'},
+    {src: 'assets/icons/icon_vuejs.svg', alt: 'Vue:Js'}
+  ]
 }

@@ -16,7 +16,10 @@ section {
 
 .learning {
     flex: 1;
+    //different for mobile
+    gap: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease-in-out;
@@ -28,5 +31,11 @@ section {
     &:hover {
         transition: all 0.5s ease-in-out;
         background-image: url('../../../../public/assets/icons/bg_shape_skills_learning_hover.svg');
+    }
+
+    >div {
+        //16px for mobile
+        gap: 24px;
+        display: flex;
     }
 }

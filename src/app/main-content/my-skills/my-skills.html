@@ -6,7 +6,9 @@
         </div>
         <div class="learning">
             <p>{{language == 'DE'? 'Zurzeit lerne ich': 'I am currently learning'}}</p>
-            <!-- need to add learning here -->
+            <div>
+                <img *ngFor="let icon of learningIcons" [src]="icon.src" [alt]="icon.alt">
+            </div>
         </div>
     </div>
 </section>
