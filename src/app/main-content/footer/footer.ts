@@ -8,10 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './footer.scss'
 })
 export class Footer {
+  //insert correct mail
   socialBtns = [
-    { srcBase: 'assets/icons/button_mail', alt: 'mailBtn', hover: false},
-    { srcBase: 'assets/icons/button_github', alt: 'githubBtn', hover: false},
-    { srcBase: 'assets/icons/button_linkedin', alt: 'linkedinBtn', hover: false}
+    { srcBase: 'assets/icons/button_mail', alt: 'mailBtn', hover: false, href:''},
+    { srcBase: 'assets/icons/button_github', alt: 'githubBtn', hover: false, href:'https://github.com/AnneVollmann'},
+    { srcBase: 'assets/icons/button_linkedin', alt: 'linkedinBtn', hover: false, href:'https://www.linkedin.com/in/anne-vollmann-38998a332/'}
   ];
 
   setSocialBtnHovered(btn: any, hover: boolean) {

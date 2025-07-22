@@ -14,16 +14,17 @@
             vitae, ea fugit libero necessitatibus?
         </p>
         <div class="contact-oportunities">
-            <p (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false">
+            <!-- insert mail (text, href)-->
+            <a (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false" href="mailto:a@v.de">
                 <img [src]="mailHovered ? 'assets/icons/icon_mail_hover.svg' : 'assets/icons/icon_mail.svg'"
                     alt="mail icon">
                 E-Mail: ...
-            </p>
-            <p (mouseenter)="phoneHovered = true" (mouseleave)="phoneHovered = false">
+            </a>
+            <a (mouseenter)="phoneHovered = true" (mouseleave)="phoneHovered = false" a href="tel:+4915734850567">
                 <img [src]="phoneHovered ? 'assets/icons/icon_phone_hover.svg' : 'assets/icons/icon_phone.svg'"
                     alt="phone icon">
                 Tel.: (+49) 1573 4850567
-            </p>
+            </a>
         </div>
     </div>
     <form (ngSubmit)="onSubmit()">
@@ -50,8 +51,7 @@
                         outlined.</p>
                 </div>
             </div>
-            <button class="btn-secondary"
-                [disabled]="checkboxChecked? false: true">Send</button>
+            <button class="btn-secondary" [disabled]="checkboxChecked? false: true">Send</button>
         </div>
     </form>
 </section>

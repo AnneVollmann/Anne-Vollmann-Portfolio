@@ -8,7 +8,9 @@
     </div>
     <div class="social-btns">
         <!-- different img for mobile -->
-        <img *ngFor="let btn of socialBtns" [src]="btn.hover? btn.srcBase+'_dark_hover.svg': btn.srcBase+'_dark.svg'"
+        <a *ngFor="let btn of socialBtns" href="{{btn.href}}" target="_blank">
+            <img [src]="btn.hover? btn.srcBase+'_dark_hover.svg': btn.srcBase+'_dark.svg'"
             [alt]="btn.alt" (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
+        </a>
     </div>
 </footer>

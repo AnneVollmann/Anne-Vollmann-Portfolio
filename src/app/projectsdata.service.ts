@@ -19,6 +19,8 @@ export class ProjectsdataService {
             learnedEn: '',
             technologies: ['javascript', 'css', 'html'],
             img: 'assets/img/join.png',
+            href: '',
+            github: 'https://github.com/AnneVollmann/Join---overhauled',
         },
         {
             title: 'Dusky Swamps',
@@ -31,6 +33,8 @@ export class ProjectsdataService {
             learnedEn: '',
             technologies: ['javascript', 'css', 'html'],
             img: 'assets/img/dusky_swamps.png',
+            href: '',
+            github: 'https://github.com/AnneVollmann/Dusky-Swamps',
         }
     ]
 }

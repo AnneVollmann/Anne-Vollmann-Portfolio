@@ -44,8 +44,8 @@
             </div>
             <img class="project-img" src="{{myProjects.projects[currentProjectIndex].img}}" alt="{{myProjects.projects[currentProjectIndex].title}} image">
             <div class="project-btns">
-                <button class="btn-primary">Live Test</button>
-                <button class="btn-secondary">GitHub</button>
+                <a href="{{myProjects.projects[currentProjectIndex].href}}" target="_blank"><button class="btn-primary">Live Test</button></a>
+                <a href="{{myProjects.projects[currentProjectIndex].github}}" target="_blank"><button class="btn-secondary">GitHub</button></a>
             </div>
         </div>
     </div>

@@ -6,12 +6,14 @@
 
         <div class="anne-vollmann-headline">
             <div class="socials">
-                <div class="logo" >
+                <div class="logo">
                     <img src="assets/icons/location.png" alt="anne_vollmann_logo">
                 </div>
                 <div class="social-btns">
-                    <img *ngFor="let btn of socialBtns" [src]="btn.hover? btn.srcBase+'_hover.svg': btn.srcBase+'.svg'"
-                        [alt]="btn.alt" (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
+                    <a *ngFor="let btn of socialBtns" href="{{btn.href}}" target="_blank">
+                        <img [src]="btn.hover? btn.srcBase+'_hover.svg': btn.srcBase+'.svg'" [alt]="btn.alt"
+                            (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
+                    </a>
                 </div>
             </div>
             <div class="title">
