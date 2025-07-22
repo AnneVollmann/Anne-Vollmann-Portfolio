@@ -8,17 +8,19 @@
     </ol>
     <div class="project">
         <div class="project-infos">
-            <section>
+            <section *ngIf="myProjects.projects[currentProjectIndex].aboutDe !== ''">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
                     <p>About the project</p>
-                    <span>Duration: {{myProjects.projects[currentProjectIndex].duration}} weeks</span>
+                    <span *ngIf="myProjects.projects[currentProjectIndex].durationWeeks !== ''">
+                        Duration: {{myProjects.projects[currentProjectIndex].durationWeeks}} weeks
+                    </span>
                 </div>
                 <article>
                     {{myProjects.projects[currentProjectIndex].aboutDe}}
                 </article>
             </section>
-            <section>
+            <section *ngIf="myProjects.projects[currentProjectIndex].organizationDe !== ''">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
                     <p>How i organised my work process</p>
@@ -27,7 +29,16 @@
                     {{myProjects.projects[currentProjectIndex].organizationDe}}
                 </article>
             </section>
-            <section>
+            <section *ngIf="myProjects.projects[currentProjectIndex].groupWorkDe !== ''">
+                <div class="info-header">
+                    <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
+                    <p>My group work experience</p>
+                </div>
+                <article>
+                    {{myProjects.projects[currentProjectIndex].groupWorkDe}}
+                </article>
+            </section>
+            <section *ngIf="myProjects.projects[currentProjectIndex].learnedDe !== ''">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
                     <p>What i have learned</p>
