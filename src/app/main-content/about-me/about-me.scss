@@ -15,17 +15,27 @@ section {
     div {
         display: flex;
         align-items: center;
+        gap: 8px;
 
         p {
-            padding-left: 8px;
+            min-width: 0;
+            max-width: fit-content;
+            margin: 0 auto 0 0;
+            border-right: 2px solid var(--color-white);
+            overflow: hidden;
             font-size: calc(2.75rem - clamp(1.125rem, 1.7679rem + -0.7143vw, 1.625rem));
+            white-space: nowrap;
+            animation: typing 8s steps(40, end) infinite, blink-border 1s step-end infinite;
+        }
+
+        .ellipsis {
+            padding-right: 8px;
         }
     }
 }
 
 .self-description {
     max-width: 380px;
-    flex: 1;
     gap: 24px;
     display: flex;
     flex-direction: column;
@@ -38,8 +48,43 @@ section {
     a {
         width: fit-content;
         align-self: flex-end;
+
         a {
             color: var(--color-secondary);
         }
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    75% {
+        width: 100%;
+    }
+
+    90% {
+        width: 0%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes blink-border {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--color-white);
     }
 }

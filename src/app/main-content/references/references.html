@@ -6,7 +6,7 @@
             <p class="name">{{reference.name}}</p>
             <p class="project">{{language == 'DE'? 'Projekt': 'Project'}} <span>{{reference.project}}</span></p>
             <article class="quote">
-                "{{reference.quoteEn}}"
+                "{{language == 'DE'? reference.quoteDe: reference.quoteEn}}"
             </article>
             <a href="{{reference.linkedin}}" target="_blank" class="linkedin">{{language == 'DE'? 'LinkedIn Profil': 'LinkedIn Profile'}}</a>
         </div>
