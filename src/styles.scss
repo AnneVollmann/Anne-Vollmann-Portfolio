@@ -55,12 +55,11 @@
   --color-lightgrey: #8f9190;
   --color-error: #E44C36;
 
-  --padding-main-primary: 0 calc(8.312999999999999rem - clamp(1.5rem, 18.1320rem + -18.4800vw, 6.813rem));
-  // --padding-main-primary: 0 calc(8.312999999999999rem - clamp(1.5rem, 8.3310rem + -7.5900vw, 6.813rem));
-  --padding-main-secondary: 0 calc(19.625rem - clamp(1.5rem, 22.8750rem + -23.7500vw, 18.125rem));
+  --padding-main-primary: 0 calc(8.312999999999999rem - clamp(1.5rem, 10.0963rem + -9.5515vw, 6.813rem));
+  --padding-main-secondary: 0 calc(19.625rem - clamp(1.5rem, 28.3989rem + -29.8876vw, 18.125rem));
 
-  --fontsize-h1: calc(8.5rem - clamp(3rem, 6.2143rem + -3.5714vw, 5.5rem));
-  --fontsize-h2: calc(5.75rem - clamp(2rem, 4.2500rem + -2.5000vw, 3.75rem));
+  --fontsize-h1: calc(8.5rem - clamp(3rem, 7.0449rem + -4.4944vw, 5.5rem));
+  --fontsize-h2: calc(5.75rem - clamp(2rem, 4.8315rem + -3.1461vw, 3.75rem));
 }
 
 * {
@@ -93,8 +92,8 @@ h1 {
 }
 
 h2 {
-  padding-top: 104px;
-  padding-bottom: 80px;
+  padding-top: calc(11.75rem - clamp(5.25rem, 8.4643rem + -3.5714vw, 6.5rem));
+  padding-bottom: calc(9rem - clamp(4rem, 6.5714rem + -2.8571vw, 5rem));
   font-size: var(--fontsize-h2);
   color: var(--color-secondary);
   text-align: center;
@@ -235,7 +234,7 @@ button {
 }
 
 .bg-img-properties {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
