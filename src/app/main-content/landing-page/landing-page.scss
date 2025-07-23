@@ -1,17 +1,18 @@
 //different for mobile
 .anne-vollmann-hero {
-    height: 746px;
+    height: calc(82.875rem - clamp(36.25rem, 62.9286rem + -29.6429vw, 46.625rem));
     padding: var(--padding-main-primary);
-    padding-top: 41px;
+    padding-top: calc(4.05rem - clamp(1.5rem, 4.2000rem + -3.0000vw, 2.55rem));
+    gap: 8px;
     display: flex;
     justify-content: space-between;
 }
 
 //different for mobile
 .anne-vollmann-photo {
-    width: 594px;
+    width: calc(65.875rem - clamp(28.75rem, 50.2857rem + -23.9286vw, 37.125rem));
     height: 100%;
-    padding-top: 22px;
+    padding-top: calc(2.125rem - clamp(0.75rem, 2.3571rem + -1.7857vw, 1.375rem));
     transition: all 0.5s ease-in-out;
     background-image: url('../../../../public/assets/icons/bg_shape_photo.svg');
     background-position: bottom !important;
@@ -28,7 +29,8 @@
 
 //different for mobile
 .anne-vollmann-headline {
-    padding-top: 27px;
+    flex: 1;
+    padding-top: calc(2.186rem - clamp(0.5rem, 3.5497rem + -3.3886vw, 1.686rem));
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,12 +42,13 @@
 
         .logo {
             margin: 0 auto;
+            padding-left: 30px;
         }
 
         .social-btns {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: calc(1.625rem - clamp(0.625rem, 1.5893rem + -1.0714vw, 1rem));
 
             img {
                 width: 30px;
@@ -62,13 +65,14 @@
         }
 
         .title-addition {
+            padding-top: 8px;
             font-size: calc(4rem - clamp(1.5rem, 2.7857rem + -1.4286vw, 2.5rem));
         }
     }
 
     .arrow {
-        padding-top: 140px;
-        padding-bottom: 76px;
+        padding-top: calc(11.25rem - clamp(2.5rem, 18.5714rem + -17.8571vw, 8.75rem));
+        padding-bottom: calc(6rem - clamp(1.25rem, 10.2500rem + -10.0000vw, 4.75rem));
         align-self: center;
     }
 }
