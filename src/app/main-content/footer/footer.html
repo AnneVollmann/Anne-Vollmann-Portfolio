@@ -3,14 +3,15 @@
         <a>{{language == 'DE'? 'Impressum': 'Legal notice'}}</a>
         <p>© Anne Vollmann 2025</p>
     </div>
-    <div class="logo">
-        <img src="assets/icons/location.png" alt="anne_vollmann_logo">
+    <div class="logo logo-dark">
+        <img src="assets/icons/logo_av_dark.svg" alt="anne_vollmann_logo">
+        <p>A. Vollmann<br><span>developer</span></p>
     </div>
     <div class="social-btns">
         <!-- different img for mobile -->
         <a *ngFor="let btn of socialBtns" href="{{btn.href}}" target="_blank">
-            <img [src]="btn.hover? btn.srcBase+'_dark_hover.svg': btn.srcBase+'_dark.svg'"
-            [alt]="btn.alt" (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
+            <img [src]="btn.hover? btn.srcBase+'_dark_hover.svg': btn.srcBase+'_dark.svg'" [alt]="btn.alt"
+                (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
         </a>
     </div>
 </footer>

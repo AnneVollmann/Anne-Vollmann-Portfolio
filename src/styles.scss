@@ -187,3 +187,41 @@ button {
   width: 38px;
   cursor: pointer;
 }
+
+//different logo-size and font-size for mobile (testing needed)
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 38px;
+    object-fit: fill;
+  }
+
+  p {
+    padding-top: 6px;
+    text-align: center;
+    font-family: 'Anta';
+    font-size: 18px;
+    line-height: 1;
+    text-wrap: nowrap;
+
+    span {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1;
+    }
+  }
+}
+
+.logo-dark {
+  img {
+    filter: opacity(0.8);
+  }
+
+  p span {
+    color: var(--color-primary);
+  }
+}
