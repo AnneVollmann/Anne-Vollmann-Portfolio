@@ -18,7 +18,7 @@ nav {
     section {
         width: 100%;
         height: 100%;
-        padding: var(--padding-main-primary);
+        padding: 0 calc(8.312999999999999rem - clamp(1.5rem, 15.1620rem + -15.1800vw, 6.813rem));
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -27,8 +27,8 @@ nav {
 
 .menu-links {
     height: 100%;
-    width: 100%;
-    max-width: 720px;
+    width: calc(75rem - clamp(30rem, 68.5714rem + -42.8571vw, 45rem));
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     justify-content: center;
@@ -39,12 +39,10 @@ nav {
         display: flex;
         justify-content: center;
 
-
         a {
             width: 100%;
             height: 100%;
-            //22px for burger menu
-            font-size: 26px;
+            font-size: calc(3rem - clamp(1.375rem, 2.0179rem + -0.7143vw, 1.625rem));
             font-weight: 500;
             display: flex;
             align-items: center;
@@ -75,3 +73,5 @@ nav {
     color: var(--color-white);
     background-image: url('../../../../public/assets/icons/bg_shape_navbar.svg');
 }
+
+//changed to burger-menu @880px

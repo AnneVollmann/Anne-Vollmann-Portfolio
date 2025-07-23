@@ -210,11 +210,13 @@ button {
     text-align: center;
     font-family: 'Anta';
     font-size: 18px;
+    //font-size: calc(2.125rem - clamp(1rem, 1.3673rem + -0.4082vw, 1.125rem));
     line-height: 1;
     text-wrap: nowrap;
 
     span {
       font-size: 18px;
+      //font-size: calc(2.125rem - clamp(1rem, 1.3673rem + -0.4082vw, 1.125rem));
       font-weight: 300;
       line-height: 1;
     }
