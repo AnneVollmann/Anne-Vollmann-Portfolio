@@ -10,14 +10,19 @@ button a {
 
 nav {
     height: 104px;
-    padding: var(--padding-main-primary);
     z-index: 3;
-    background: var(--color-secondary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
+    background: var(--color-secondary);
+
+    section {
+        width: 100%;
+        height: 100%;
+        padding: var(--padding-main-primary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .menu-links {

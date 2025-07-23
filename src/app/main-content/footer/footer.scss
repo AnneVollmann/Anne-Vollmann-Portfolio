@@ -2,11 +2,16 @@ footer {
     //different for mobile
     height: 214px;
     margin-top: calc(17.75rem - clamp(6.5rem, 12.6574rem + -7.0370vw, 11.25rem));
-    padding: var(--padding-main-primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background: var(--color-secondary);
+
+    section {
+        width: 100%;
+        height: 100%;
+        padding: var(--padding-main-primary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
 }
 
 .legals {

@@ -1,5 +1,6 @@
 <nav>
-    <div class="logo logo-dark">
+    <section>
+            <div class="logo logo-dark">
         <img src="assets/icons/logo_av_dark.svg" alt="anne_vollmann_logo">
         <p>A. Vollmann<br><span>developer</span></p>
     </div>
@@ -16,4 +17,5 @@
         <button (click)="setLanguage('EN')"
             [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.currentLanguage == 'EN'}">EN</button>
     </div>
+    </section>
 </nav>

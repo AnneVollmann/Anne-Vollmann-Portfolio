@@ -38,6 +38,8 @@ span {
 
 //mobile padding needs to be adjusted
 .project {
+    //needs adjustments
+    height: 570px;
     padding: var(--padding-main-primary);
     padding-top: calc(3.5rem - clamp(1.5rem, 2.1429rem + -0.7143vw, 2rem));
     padding-bottom: 28px;
