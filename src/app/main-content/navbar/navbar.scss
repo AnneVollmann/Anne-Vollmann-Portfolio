@@ -53,10 +53,7 @@ nav {
 .btn-current-section {
     color: var(--color-white) !important;
     background-image: url('../../../../public/assets/icons/bg_shape_navbar.svg');
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 84px 56px !important;
-    background-size: contain;
 }
 
 .language-selection {
@@ -72,7 +69,4 @@ nav {
 .btn-current-language {
     color: var(--color-white);
     background-image: url('../../../../public/assets/icons/bg_shape_navbar.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
 }

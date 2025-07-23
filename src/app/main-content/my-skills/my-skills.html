@@ -4,7 +4,7 @@
         <div class="skills">
             <img *ngFor="let icon of skillIcons" [src]="icon.src" [alt]="icon.alt">
         </div>
-        <div class="learning">
+        <div class="learning bg-img-properties">
             <p>{{language == 'DE'? 'Zurzeit lerne ich': 'I am currently learning'}}</p>
             <div>
                 <img *ngFor="let icon of learningIcons" [src]="icon.src" [alt]="icon.alt">

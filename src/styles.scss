@@ -225,3 +225,9 @@ button {
     color: var(--color-primary);
   }
 }
+
+.bg-img-properties {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

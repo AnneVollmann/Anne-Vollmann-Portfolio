@@ -52,7 +52,7 @@
                 <input type="checkbox" (click)="checkboxChecked = !checkboxChecked"
                     (mouseenter)="checkboxHovered = true" (mouseleave)="checkboxHovered = false">
                 <div>
-                    <div class="checkbox" [class.checkbox-hovered]="checkboxHovered"
+                    <div class="checkbox bg-img-properties" [class.checkbox-hovered]="checkboxHovered"
                         [class.checkbox-checked]="checkboxChecked"></div>
                     <p>{{language == 'DE'? 'Ich habe die': 'I’ve read the'}}
                         <a><span>{{language == 'DE'? 'Datenschutzerklärung ': 'privacy policy'}}</span></a>
