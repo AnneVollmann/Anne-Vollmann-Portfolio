@@ -1,9 +1,9 @@
-import { CommonModule, NgClass, NgStyle } from '@angular/common';
+import { CommonModule, NgClass} from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
-  imports: [NgClass, CommonModule, NgStyle],
+  imports: [NgClass, CommonModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss'
 })
