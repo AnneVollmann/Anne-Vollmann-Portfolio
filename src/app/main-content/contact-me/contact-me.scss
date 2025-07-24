@@ -1,7 +1,7 @@
 .arrow-container {
     height: 0;
     position: relative;
-    top: 104px;
+    top: calc(11.75rem - clamp(5.25rem, 8.4643rem + -3.5714vw, 6.5rem));
     padding: var(--padding-main-primary);
     justify-self: flex-end;
 

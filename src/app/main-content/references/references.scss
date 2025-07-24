@@ -47,24 +47,6 @@ h2 {
         //text left-aligned for mobile
         text-align: center;
         overflow: auto;
-
-        &::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: var(--color-primary);
-            border-radius: 30px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: var(--color-grey);
-            border-radius: 30px;
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background: var(--color-lightgrey);
-        }
     }
 
     .linkedin {

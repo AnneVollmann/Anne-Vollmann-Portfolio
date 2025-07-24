@@ -188,8 +188,8 @@ button {
   }
 }
 
-.arrow {
-  width: 38px;
+.arrow img {
+  width: calc(4.25rem - clamp(1.875rem, 2.6840rem + -0.8989vw, 2.375rem));
   cursor: pointer;
 }
 
@@ -201,7 +201,7 @@ button {
   align-items: center;
 
   img {
-    height: 38px;
+    height: calc(4.25rem - clamp(1.875rem, 2.6840rem + -0.8989vw, 2.375rem));
     object-fit: fill;
   }
 
@@ -209,14 +209,12 @@ button {
     padding-top: 6px;
     text-align: center;
     font-family: 'Anta';
-    font-size: 18px;
-    //font-size: calc(2.125rem - clamp(1rem, 1.3673rem + -0.4082vw, 1.125rem));
+    font-size: calc(2.125rem - clamp(1rem, 1.2022rem + -0.2247vw, 1.125rem));
     line-height: 1;
     text-wrap: nowrap;
 
     span {
-      font-size: 18px;
-      //font-size: calc(2.125rem - clamp(1rem, 1.3673rem + -0.4082vw, 1.125rem));
+      font-size: calc(2.125rem - clamp(1rem, 1.2022rem + -0.2247vw, 1.125rem));
       font-weight: 300;
       line-height: 1;
     }
@@ -237,4 +235,32 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.quote,
+textarea {
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color-primary);
+    border-radius: 30px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-grey);
+    border-radius: 30px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-lightgrey);
+  }
+}
+
+textarea {
+  &::-webkit-scrollbar-track {
+    background: var(--color-tertiary);
+    margin: 20px;
+  }
 }
