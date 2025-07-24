@@ -16,10 +16,10 @@ export class ReferencesdataService {
             linkedin: 'https://www.linkedin.com/in/sonja-reimann-thanisch-1574881b3/'
         },
         {
-            name: '',
-            project: '',
-            quoteDe: '',
-            quoteEn: '',
+            name: 'Liane Schmuhl',
+            project: 'Join',
+            quoteDe: 'Anne ist eine engagierte und gut organisierte Teamplayerin. Sie arbeitet zielstrebig und unterstützt andere Teammitglieder, um den erfolgreichen Abschluss eines Projekts sicherzustellen. Ich hatte die Gelegenheit, ihre Professionalität im Rahmen unseres "Join"-Projekts kennenzulernen und bin dankbar für die tolle Zusammenarbeit.',
+            quoteEn: 'Anne is a hard-working, well-organized team player. She works purposefully and supports other team members to ensure the successful completion of a project. I had the opportunity to experience her professionalism in our ’Join’ project and am grateful for the great collaboration.',
             linkedin: ''
         }
     ]

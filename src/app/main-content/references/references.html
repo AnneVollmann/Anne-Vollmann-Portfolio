@@ -8,7 +8,9 @@
             <article class="quote">
                 "{{language == 'DE'? reference.quoteDe: reference.quoteEn}}"
             </article>
-            <a href="{{reference.linkedin}}" target="_blank" class="linkedin">{{language == 'DE'? 'LinkedIn Profil': 'LinkedIn Profile'}}</a>
+            <a href="{{reference.linkedin}}" target="_blank" class="linkedin">
+                {{reference.linkedin == ''? '' : (language == 'DE'? 'LinkedIn Profil': 'LinkedIn Profile')}}
+            </a>
         </div>
         }
     </section>

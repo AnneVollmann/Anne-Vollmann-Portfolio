@@ -41,14 +41,30 @@ h2 {
     }
 
     .quote {
-        //max-width: calc(33.375rem - clamp(13.75rem, 21.3036rem + -8.3929vw, 19.625rem));
-        width: 420px;
-        //height: calc(13.125rem - clamp(5.625rem, 8.0357rem + -2.6786vw, 7.5rem));
-        //height: calc(17.813rem - clamp(7.188rem, 11.6434rem + -5.0919vw, 10.625rem));
+        width: calc(41.5rem - clamp(17.625rem, 33.6964rem + -17.8571vw, 23.875rem));
+        height: calc(19.6rem - clamp(7.5rem, 19.3286rem + -13.1429vw, 12.1rem));
         font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
         //text left-aligned for mobile
         text-align: center;
-        overflow: visible;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: var(--color-primary);
+            border-radius: 30px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--color-grey);
+            border-radius: 30px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: var(--color-lightgrey);
+        }
     }
 
     .linkedin {
