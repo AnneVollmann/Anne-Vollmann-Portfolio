@@ -14,6 +14,7 @@ span {
         padding: 0 calc(2.5rem - clamp(0.25rem, 2.8214rem + -2.8571vw, 2.25rem));
         display: flex;
         align-items: center;
+        justify-content: center;
         color: var(--color-secondary);
         font-size: 30px;
         font-weight: 500;
@@ -38,12 +39,10 @@ span {
 
 //mobile padding needs to be adjusted
 .project {
-    //needs adjustments
-    height: 570px;
     padding: var(--padding-main-primary);
     padding-top: calc(3.5rem - clamp(1.5rem, 2.1429rem + -0.7143vw, 2rem));
     padding-bottom: 28px;
-    gap: 56px;
+    gap: calc(6rem - clamp(2.5rem, 5.0714rem + -2.8571vw, 3.5rem));
     display: flex;
     background-color: var(--color-tertiary);
 }
@@ -61,7 +60,7 @@ span {
         background-color: var(--color-tertiary);
 
         .info-header {
-            gap: calc(2.25rem - clamp(0.75rem, 1.7143rem + -1.0714vw, 1.5rem));
+            gap: calc(2.25rem - clamp(0.75rem, 1.9635rem + -1.3483vw, 1.5rem));
             display: flex;
             align-items: center;
             font-size: calc(2.875rem - clamp(1.125rem, 1.9286rem + -0.8929vw, 1.75rem));
@@ -79,7 +78,7 @@ span {
     align-items: center;
 
     .technologies {
-        gap: 32px;
+        gap: calc(3.75rem - clamp(1.75rem, 2.8088rem + -1.1765vw, 2rem));
         display: flex;
 
         //remove for mobile, replace with text
@@ -90,8 +89,8 @@ span {
     }
 
     .project-img {
-        width: calc(45.155rem - clamp(16.813rem, 31.6360rem + -16.4700vw, 28.342rem));
-        min-height: 312px;
+        width: calc(45.155rem - clamp(16.813rem, 35.4667rem + -20.7263vw, 28.342rem));
+        height: calc(29.938000000000002rem - clamp(10.438rem, 25.1001rem + -16.2912vw, 19.5rem));
         margin-top: 16px;
         border-radius: 30px;
     }

@@ -20,6 +20,10 @@ section {
         justify-content: center;
         align-items: center;
 
+        img {
+            height: calc(7rem - clamp(3.25rem, 4.5357rem + -1.4286vw, 3.75rem));
+        }
+
         figcaption {
             text-align: center;
             color: var(--color-secondary);
