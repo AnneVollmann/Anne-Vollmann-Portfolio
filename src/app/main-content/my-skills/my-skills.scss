@@ -14,6 +14,7 @@ section {
     gap: calc(1rem - clamp(0rem, 2.5714rem + -2.8571vw, 1rem));
 
     figure {
+        padding-bottom: clamp(0rem, 1.9286rem + -2.1429vw, 0.75rem);
         gap: 10px;
         display: flex;
         flex-direction: column;
@@ -21,20 +22,18 @@ section {
         align-items: center;
 
         img {
-            height: calc(7rem - clamp(3.25rem, 4.5357rem + -1.4286vw, 3.75rem));
+            height: calc(6.55rem - clamp(2.8rem, 4.0214rem + -1.3571vw, 3.75rem));
         }
 
         figcaption {
             text-align: center;
             color: var(--color-secondary);
-            padding-bottom: clamp(0rem, 1.9286rem + -2.1429vw, 0.75rem);
         }
     }
 }
 
 .learning {
     flex: 1;
-    //different for mobile
     gap: calc(2.25rem - clamp(1rem, 1.6429rem + -0.7143vw, 1.25rem));
     display: flex;
     flex-direction: column;
@@ -48,9 +47,79 @@ section {
         background-image: url('../../../../public/assets/icons/bg_shape_skills_learning_hover.svg');
     }
 
-    >div {
-        //16px for mobile
-        gap: 24px;
+    .learning-icons {
+        gap: calc(2.5rem - clamp(1rem, 1.7857rem + -1.4286vw, 1.5rem));
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 54px;
+        }
+    }
+
+    .small-screen-only {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 880px) {
+    section>div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills {
+        width: 100%;
+        max-width: calc(47.5rem - clamp(16.25rem, 39.8214rem + -42.8571vw, 31.25rem));
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        figure {
+            width: 25%;
+            padding-bottom: calc(4.5rem - clamp(2rem, 2.7857rem + -1.4286vw, 2.5rem));
+        }
+    }
+
+    .learning {
+        width: 100%;
+        gap: calc(4rem - clamp(1.5rem, 4.1667rem + -4.8485vw, 2.5rem));
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-image: unset;
+
+        &:hover {
+            background-image: unset;
+        }
+
+        .learning-icons {
+            width: calc(13.5rem - clamp(6rem, 8.3571rem + -4.2857vw, 7.5rem));
+            height: calc(13.5rem - clamp(6rem, 8.3571rem + -4.2857vw, 7.5rem));
+            transition: all 0.5s ease-in-out;
+            background-image: url('../../../../public/assets/icons/bg_shape_skills_learning.svg');
+
+            &:hover {
+                transition: all 0.5s ease-in-out;
+                background-image: url('../../../../public/assets/icons/bg_shape_skills_learning_hover.svg');
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    figcaption {
+        display: none;
+    }
+
+    .learning {
+        flex-direction: column;
+
+        p {
+            color: var(--color-secondary);
+        }
     }
 }
