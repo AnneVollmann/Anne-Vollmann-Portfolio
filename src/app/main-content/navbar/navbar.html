@@ -1,21 +1,30 @@
 <nav>
     <section>
-            <div class="logo logo-dark">
-        <img src="assets/icons/logo_av_dark.svg" alt="anne_vollmann_logo">
-        <p>A. Vollmann<br><span>developer</span></p>
-    </div>
-    <ul class="menu-links">
-        <li *ngFor="let btn of navBtns">
-            <a [ngClass]="{'btn-current-section bg-img-properties': currentSection == btn.href}" (click)="setSection(btn.href)" href={{btn.href}}>
-                {{currentLanguage == 'DE'? btn.sectionDe: btn.sectionEn}}
-            </a>
-        </li>
-    </ul>
-    <div class="language-selection" (mouseenter)="languageBtnHovered = true" (mouseleave)="languageBtnHovered = false">
-        <button (click)="setLanguage('DE')"
-            [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.currentLanguage == 'DE'}">DE</button>
-        <button (click)="setLanguage('EN')"
-            [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.currentLanguage == 'EN'}">EN</button>
-    </div>
+        <div class="logo logo-dark large-screen-only">
+            <img src="assets/icons/logo_av_dark.svg" alt="anne_vollmann_logo">
+            <p>A. Vollmann<br><span>developer</span></p>
+        </div>
+        <div class="logo small-screen-only">
+            <img src="assets/icons/logo_av_light.svg" alt="anne_vollmann_logo">
+            <p>A. Vollmann<br><span>developer</span></p>
+        </div>
+        <ul class="menu-links large-screen-only">
+            <li *ngFor="let btn of navBtns">
+                <a [ngClass]="{'btn-current-section bg-img-properties': currentSection == btn.href}"
+                    (click)="setSection(btn.href)" href={{btn.href}}>
+                    {{currentLanguage == 'DE'? btn.sectionDe: btn.sectionEn}}
+                </a>
+            </li>
+        </ul>
+        <div class="language-selection large-screen-only" (mouseenter)="languageBtnHovered = true"
+            (mouseleave)="languageBtnHovered = false">
+            <button (click)="setLanguage('DE')"
+                [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.currentLanguage == 'DE'}">DE</button>
+            <button (click)="setLanguage('EN')"
+                [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.currentLanguage == 'EN'}">EN</button>
+        </div>
+        <button class="burger-menu bg-img-properties small-screen-only">
+            <img src="assets/icons/burger_menu.svg" alt="navigation">
+        </button>
     </section>
 </nav>

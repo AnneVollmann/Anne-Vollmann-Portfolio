@@ -74,4 +74,18 @@ nav {
     background-image: url('../../../../public/assets/icons/bg_shape_navbar.svg');
 }
 
-//changed to burger-menu @880px
+.burger-menu img {
+    width: calc(4.215rem - clamp(1.875rem, 2.6057rem + -1.3286vw, 2.34rem));
+    height: calc(4.5rem - clamp(2rem, 2.7857rem + -1.4286vw, 2.5rem));
+}
+
+@media (max-width: 880px) {
+    nav {
+        height: 122px;
+        background: var(--color-primary);
+
+        section {
+            padding: 0 calc(6rem - clamp(2rem, 5.1429rem + -5.7143vw, 4rem));
+        }
+    }
+}

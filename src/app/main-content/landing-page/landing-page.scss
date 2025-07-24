@@ -1,5 +1,4 @@
-//different for mobile
-.anne-vollmann-hero {
+.hero {
     height: calc(82.875rem - clamp(36.25rem, 62.9286rem + -29.6429vw, 46.625rem));
     padding: var(--padding-main-primary);
     padding-top: calc(4.05rem - clamp(1.5rem, 4.2000rem + -3.0000vw, 2.55rem));
@@ -8,10 +7,10 @@
     justify-content: space-between;
 }
 
-//different for mobile
 .anne-vollmann-photo {
     width: calc(65.875rem - clamp(28.75rem, 50.2857rem + -23.9286vw, 37.125rem));
     height: 100%;
+    min-height: 480px;
     padding-top: calc(2.125rem - clamp(0.75rem, 2.3571rem + -1.7857vw, 1.375rem));
     transition: all 0.5s ease-in-out;
     background-image: url('../../../../public/assets/icons/bg_shape_photo.svg');
@@ -22,20 +21,18 @@
         background-image: url('../../../../public/assets/icons/bg_shape_photo_hover.svg');
     }
 
-    .photo {
+    img {
         height: 100%;
     }
 }
 
-//different for mobile
-.anne-vollmann-headline {
+.headline {
     flex: 1;
     padding-top: calc(2.186rem - clamp(0.5rem, 3.5497rem + -3.3886vw, 1.686rem));
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    //d-none in mobile
     .socials {
         display: flex;
         justify-content: space-between;
@@ -74,5 +71,32 @@
         padding-top: calc(11.25rem - clamp(2.5rem, 18.5714rem + -17.8571vw, 8.75rem));
         padding-bottom: calc(6rem - clamp(1.25rem, 10.2500rem + -10.0000vw, 4.75rem));
         align-self: center;
+    }
+}
+
+@media (max-width: 880px) {
+    .hero {
+        height: unset;
+        padding-top: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .anne-vollmann-photo {
+        width: calc(48.75rem - clamp(18.75rem, 36.4286rem + -32.1429vw, 30rem));
+        min-height: calc(60rem - clamp(23.125rem, 44.7321rem + -39.2857vw, 36.875rem));
+        margin-top: 12px;
+        padding: 0;
+        background-image: url('../../../../public/assets/img/anne_vollmann_small_screen.png');
+
+        &:hover {
+            background-image: url('../../../../public/assets/img/anne_vollmann_small_screen_hover.png');
+        }
+    }
+
+    .headline {
+        .arrow {
+            padding-bottom: calc(1.25rem - clamp(0rem, 1.9643rem + -3.5714vw, 1.25rem));
+        }
     }
 }

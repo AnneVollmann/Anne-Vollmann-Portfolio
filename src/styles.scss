@@ -46,6 +46,11 @@
   src: url('/assets/fonts/JosefinSans-Bold.ttf') format('truetype');
 }
 
+app-main-content {
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
   --color-primary: #262E34;
   --color-secondary: #89BCD9;
@@ -92,8 +97,8 @@ h1 {
 }
 
 h2 {
-  padding-top: calc(11.75rem - clamp(5.25rem, 8.4643rem + -3.5714vw, 6.5rem));
-  padding-bottom: calc(9rem - clamp(4rem, 6.5714rem + -2.8571vw, 5rem));
+  padding-top: calc(11.5rem - clamp(5rem, 6.9286rem + -2.1429vw, 6.5rem));
+  padding-bottom: calc(7.5rem - clamp(2.5rem, 5.7143rem + -3.5714vw, 5rem));
   font-size: var(--fontsize-h2);
   color: var(--color-secondary);
   text-align: center;
@@ -189,7 +194,7 @@ button {
 }
 
 .arrow img {
-  width: calc(4.25rem - clamp(1.875rem, 2.6840rem + -0.8989vw, 2.375rem));
+  width: calc(4.25rem - clamp(1.875rem, 2.5179rem + -0.7143vw, 2.375rem));
   cursor: pointer;
 }
 
@@ -262,5 +267,21 @@ textarea {
   &::-webkit-scrollbar-track {
     background: var(--color-tertiary);
     margin: 20px;
+  }
+}
+
+.small-screen-only {
+  display: none;
+
+  @media (max-width: 880px) {
+    display: flex !important;
+  }
+}
+
+.large-screen-only {
+  display: flex;
+
+  @media (max-width: 880px) {
+    display: none !important;
   }
 }
