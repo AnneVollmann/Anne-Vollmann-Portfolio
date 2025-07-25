@@ -1,5 +1,5 @@
 <section>
-    <div class="arrow-container">
+    <div class="arrow-container arrow-top">
         <a href="#landingPage" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
             class="arrow">
             <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_bottom">
@@ -8,6 +8,7 @@
     </div>
     <h2>{{language == 'DE'? 'Kontakt aufnehmen': 'Contact me'}}</h2>
     <div class="contact-overview">
+        <span class="motivation-span">{{language == 'DE'? 'Bereit für eine Zusammenarbeit? ': 'Let us work together!'}}</span>
         <p class="open-for">
             {{language == 'DE'? 'Ich freue mich über Jobangebote und Projekte in der Softwareentwicklung. Für Herausforderungen außerhalb meiner aktuellen Skills (z.B. Backend) bin ich ebenfalls offen und erweitere meine Fähigkeiten gern.': 'Feel free to get in touch with job offers or opportunities in software development. I’m also open to challenges outside my current skill set (e.g. backend) and enjoy expanding my abilities.'}}
         </p>
@@ -63,4 +64,11 @@
             <button class="btn-secondary" [disabled]="checkboxChecked? false: true">{{language == 'DE'? 'Abschicken': 'Send'}}</button>
         </div>
     </form>
+    <div class="arrow-container arrow-bottom">
+        <a href="#landingPage" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
+            class="arrow">
+            <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_bottom">
+            <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_bottom">
+        </a>
+    </div>
 </section>

@@ -12,13 +12,19 @@
     }
 }
 
-//different for mobile (gaps remain the size)
+.arrow-bottom {
+    display: none;
+}
+
 .contact-overview {
     padding: var(--padding-main-secondary);
-    //different for monile
     padding-bottom: 48px;
-    gap: 36px;
+    gap: calc(3.75rem - clamp(1.5rem, 2.6786rem + -2.1429vw, 2.25rem));
     display: flex;
+
+    .motivation-span {
+        display: none
+    }
 
     .open-for {
         flex: 1;
@@ -84,6 +90,7 @@ form {
 
                 p {
                     flex: 1;
+                    font-size: calc(1.875rem - clamp(0.875rem, 1.0357rem + -0.1786vw, 1rem));
                 }
             }
         }
@@ -115,5 +122,65 @@ form {
     >span {
         display: contents !important;
         color: var(--color-error);
+    }
+}
+
+@media (max-width: 550px) {
+    .arrow-top {
+        display: none;
+    }
+
+    .arrow-bottom {
+        width: 100%;
+        height: 244px;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-overview {
+        padding-bottom: 32px;
+        flex-direction: column-reverse;
+
+        .contact-oportunities {
+            flex-direction: column-reverse;
+        }
+
+        .motivation-span {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    form {
+        // label {
+        //     display: none;
+        // }
+
+        // input,
+        // textarea {
+        //     margin-top: 14.55px;
+        // }
+
+        label {
+            position: relative;
+            top: 40px;
+            color: var(--color-lightgrey)
+        }
+
+        .sender {
+            flex-direction: column;
+        }
+
+        .submit {
+            gap: 24px;
+            flex-direction: column;
+
+            button {
+                width: fit-content;
+                align-self: flex-end;
+            }
+        }
     }
 }
