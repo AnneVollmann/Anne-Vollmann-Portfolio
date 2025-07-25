@@ -4,19 +4,18 @@ span {
 }
 
 .projects {
-    padding-left: calc(6.375rem - clamp(0rem, 8.1964rem + -9.1071vw, 6.375rem));
+    padding-left: calc(6.375rem - clamp(0rem, 10.3146rem + -11.4607vw, 6.375rem));
     display: flex;
 
     li {
-        //different responsive
-        min-width: 160px;
-        height: 97px;
-        padding: 0 calc(2.5rem - clamp(0.25rem, 2.8214rem + -2.8571vw, 2.25rem));
+        min-width: calc(16rem - clamp(6rem, 11.1429rem + -5.7143vw, 10rem));
+        height: calc(9rem - clamp(3rem, 6.8571rem + -4.2857vw, 6rem));
+        padding: 0 calc(2.75rem - clamp(0.5rem, 2.7500rem + -2.5000vw, 2.25rem));
         display: flex;
         align-items: center;
         justify-content: center;
         color: var(--color-secondary);
-        font-size: 30px;
+        font-size: calc(3rem - clamp(1.125rem, 2.0893rem + -1.0714vw, 1.875rem));
         font-weight: 500;
 
         &:hover {
@@ -37,7 +36,6 @@ span {
     }
 }
 
-//mobile padding needs to be adjusted
 .project {
     padding: var(--padding-main-primary);
     padding-top: calc(3.5rem - clamp(1.5rem, 2.1429rem + -0.7143vw, 2rem));
@@ -45,6 +43,10 @@ span {
     gap: calc(6rem - clamp(2.5rem, 5.0714rem + -2.8571vw, 3.5rem));
     display: flex;
     background-color: var(--color-tertiary);
+
+    @media (min-width: 880px) {
+        border-radius: 0 !important;
+    }
 }
 
 .project-infos {
@@ -60,7 +62,7 @@ span {
         background-color: var(--color-tertiary);
 
         .info-header {
-            gap: calc(2.25rem - clamp(0.75rem, 1.9635rem + -1.3483vw, 1.5rem));
+            gap: calc(2rem - clamp(0.5rem, 1.7857rem + -1.4286vw, 1.5rem));
             display: flex;
             align-items: center;
             font-size: calc(2.875rem - clamp(1.125rem, 1.9286rem + -0.8929vw, 1.75rem));
@@ -78,19 +80,26 @@ span {
     align-items: center;
 
     .technologies {
-        gap: calc(3.75rem - clamp(1.75rem, 2.8088rem + -1.1765vw, 2rem));
+        width: 100%;
         display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        //remove for mobile, replace with text
-        img {
-            height: 36px;
-            margin-top: 12px;
+        div {
+            gap: calc(3.75rem - clamp(1.75rem, 2.8088rem + -1.1765vw, 2rem));
+            display: flex;
+
+            //remove for mobile, replace with text
+            img {
+                height: 36px;
+                margin-top: 12px;
+            }
         }
     }
 
     .project-img {
-        width: calc(45.155rem - clamp(16.813rem, 35.4667rem + -20.7263vw, 28.342rem));
-        height: calc(29.938000000000002rem - clamp(10.438rem, 25.1001rem + -16.2912vw, 19.5rem));
+        width: calc(49.442rem - clamp(21.1rem, 39.7223rem + -20.6914vw, 28.342rem));
+        height: calc(33.308rem - clamp(13.808rem, 28.4446rem + -16.2629vw, 19.5rem));
         margin-top: 16px;
         border-radius: 30px;
     }
@@ -99,5 +108,50 @@ span {
         margin-top: 32px;
         gap: calc(3.5rem - clamp(1rem, 2.9286rem + -2.1429vw, 2.5rem));
         display: flex;
+    }
+}
+
+@media (max-width: 880px) {
+    .projects li {
+        color: var(--color-white);
+    }
+
+    .current-project {
+        color: var(--color-secondary) !important;
+    }
+
+    .project {
+        border-radius: 30px;
+        flex-direction: column;
+    }
+
+    .project-overview {
+        order: 1;
+        gap: 8px;
+
+        .technologies {
+            flex-direction: row;
+
+            div {
+                gap: unset;
+            }
+        }
+
+        .duration {
+            width: 100%;
+        }
+
+        .project-img {
+            width: calc(45.155rem - clamp(16.813rem, 34.9300rem + -32.9400vw, 28.342rem));
+            height: calc(30.238rem - clamp(10.738rem, 24.5069rem + -25.0343vw, 19.5rem));
+        }
+    }
+
+    .project-infos {
+        order: 2;
+
+        section .info-header p {
+            color: var(--color-secondary);
+        }
     }
 }

@@ -1,5 +1,8 @@
 <section>
-    <h2>{{language == 'DE'? 'Teamplayer gesucht?': 'Need a teamplayer?'}} <span>{{language == 'DE'? 'Das sagen meine Kolleg:innen über mich': 'Here what my colleagues said about me'}}</span></h2>
+    <h2>{{language == 'DE'? 'Teamplayer gesucht?': 'Need a teamplayer?'}} 
+        <br class="small-screen-only">
+        <span>{{language == 'DE'? 'Das sagen meine Kolleg:innen über mich': 'Here what my colleagues said about me'}}</span>
+    </h2>
     <section class="references">
         @for (reference of references.references; track $index) {
         <div class="reference bg-img-properties">

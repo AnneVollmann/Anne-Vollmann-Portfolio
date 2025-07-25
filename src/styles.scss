@@ -46,11 +46,6 @@
   src: url('/assets/fonts/JosefinSans-Bold.ttf') format('truetype');
 }
 
-app-main-content {
-  display: flex;
-  flex-direction: column;
-}
-
 :root {
   --color-primary: #262E34;
   --color-secondary: #89BCD9;
@@ -242,6 +237,7 @@ button {
   background-size: contain;
 }
 
+.references,
 .quote,
 textarea {
   &::-webkit-scrollbar {
@@ -283,5 +279,12 @@ textarea {
 
   @media (max-width: 880px) {
     display: none !important;
+  }
+}
+
+app-main-content {
+  @media (max-width: 880px) {
+    display: flex;
+    flex-direction: column;
   }
 }
