@@ -25,6 +25,6 @@ export class ContactMe {
   checkInput(field: string) {}
 
   onSubmit() {
-    console.log(1)
+    // console.log(1)
   }
 }

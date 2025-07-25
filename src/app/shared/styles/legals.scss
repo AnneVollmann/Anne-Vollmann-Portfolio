@@ -38,6 +38,21 @@ h3 {
     font-weight: 500;
 }
 
+.arrow-back {
+    width: 100%;
+    padding-bottom: clamp(1rem, 1.6429rem + -0.7143vw, 1.5rem);
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        width: calc(4.7rem - clamp(2rem, 2.9000rem + -1.0000vw, 2.7rem));
+    }
+
+    &:hover {
+        filter: brightness(1.7);
+    }
+}
+
 .word-break-small-screen {
     display: none;
     color: var(--color-secondary);

@@ -154,19 +154,13 @@ form {
     }
 
     form {
-        // label {
-        //     display: none;
-        // }
-
-        // input,
-        // textarea {
-        //     margin-top: 14.55px;
-        // }
-
         label {
-            position: relative;
-            top: 40px;
-            color: var(--color-lightgrey)
+            display: none;
+        }
+
+        input,
+        textarea {
+            margin-top: 14.55px;
         }
 
         .sender {

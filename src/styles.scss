@@ -126,6 +126,14 @@ textarea {
     background-color: var(--color-tertiary);
     cursor: text;
   }
+
+  &::placeholder {
+    color: transparent;
+
+    @media (max-width: 550px) {
+      color: var(--color-lightgrey);
+    }
+  }
 }
 
 textarea {
