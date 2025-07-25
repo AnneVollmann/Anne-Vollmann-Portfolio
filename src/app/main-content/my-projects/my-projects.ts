@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { ProjectsdataService } from '../../projectsdata.service';
+import { ProjectsdataService } from '../../shared/services/projectsdata.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

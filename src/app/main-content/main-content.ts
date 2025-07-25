@@ -6,11 +6,10 @@ import { MySkills } from "./my-skills/my-skills";
 import { MyProjects } from "./my-projects/my-projects";
 import { References } from './references/references';
 import { ContactMe } from "./contact-me/contact-me";
-import { Footer } from '../shared/components/footer/footer';
 
 @Component({
   selector: 'app-main-content',
-  imports: [LandingPage, Navbar, AboutMe, MySkills, MyProjects, References, ContactMe, Footer],
+  imports: [LandingPage, Navbar, AboutMe, MySkills, MyProjects, References, ContactMe],
   templateUrl: './main-content.html',
   styleUrl: './main-content.scss'
 })

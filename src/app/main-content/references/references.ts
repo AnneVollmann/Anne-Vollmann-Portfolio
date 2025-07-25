@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { ReferencesdataService } from '../../referencesdata.service';
+import { ReferencesdataService } from '../../shared/services/referencesdata.service';
 import { CommonModule } from '@angular/common';
 
 
