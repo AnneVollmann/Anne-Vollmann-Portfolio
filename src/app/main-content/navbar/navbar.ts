@@ -17,8 +17,10 @@ export class Navbar {
   currentSection = '';
   languageBtnHovered = false;
   currentLanguage = 'DE';
+  burgerMenuOpened = false;
 
   @Output()language = new EventEmitter<string>();
+  @Output()navbarActive = new EventEmitter<boolean>();
 
   setLanguage(language: string) {
     this.currentLanguage = language;
@@ -27,5 +29,10 @@ export class Navbar {
 
   setSection(section: string) {
     this.currentSection = section;
+  }
+
+  toggleBurgerMenu() {
+    this.burgerMenuOpened = !this.burgerMenuOpened;
+    this.navbarActive.emit(this.burgerMenuOpened);
   }
 }

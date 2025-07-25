@@ -14,15 +14,15 @@ nav {
     position: sticky;
     top: 0;
     background: var(--color-secondary);
+}
 
-    section {
-        width: 100%;
-        height: 100%;
-        padding: 0 calc(8.312999999999999rem - clamp(1.5rem, 15.1620rem + -15.1800vw, 6.813rem));
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.nav-large-screen {
+    width: 100%;
+    height: 100%;
+    padding: 0 calc(8.312999999999999rem - clamp(1.5rem, 15.1620rem + -15.1800vw, 6.813rem));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu-links {
@@ -74,18 +74,46 @@ nav {
     background-image: url('../../../../public/assets/icons/bg_shape_navbar.svg');
 }
 
-.burger-menu img {
+.burger-menu {
     width: calc(4.215rem - clamp(1.875rem, 2.6057rem + -1.3286vw, 2.34rem));
     height: calc(4.5rem - clamp(2rem, 2.7857rem + -1.4286vw, 2.5rem));
+    background-image: url('../../../../public/assets/icons/burger_menu.svg');
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        background-image: url('../../../../public/assets/icons/burger_menu_hover.svg');
+        transition: all 0.25s ease-in-out;
+    }
+}
+
+.close-menu {
+    background-image: url('../../../../public/assets/icons/close_menu.svg') !important;
+}
+
+.nav-small-screen {
+    width: calc(48.75rem - clamp(18.75rem, 36.4286rem + -32.1429vw, 30rem));
+    height: calc(60rem - clamp(23.125rem, 44.7321rem + -39.2857vw, 36.875rem));
+    margin-top: calc(3.5rem - clamp(1.5rem, 2.2857rem + -1.4286vw, 2rem));
+    gap: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../../public/assets/icons/bg_shape_photo.svg');
+    
+    a {
+        color: var(--color-primary);
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 880px) {
     nav {
         height: 122px;
         background: var(--color-primary);
+    }
 
-        section {
-            padding: 0 calc(6rem - clamp(2rem, 5.1429rem + -5.7143vw, 4rem));
-        }
+    .nav-large-screen {
+        padding: 0 calc(6rem - clamp(2rem, 5.1429rem + -5.7143vw, 4rem));
     }
 }

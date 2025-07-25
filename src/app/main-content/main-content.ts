@@ -16,10 +16,15 @@ import { Footer } from '../shared/components/footer/footer';
 })
 export class MainContent {
   currentLanguage: string = 'DE';
+  navbarActive: boolean = false;
   @Output()language = new EventEmitter<string>();
 
   setLanguage(language:string) {
     this.currentLanguage = language;
     this.language.emit(this.currentLanguage);
+  }
+
+  setNavbarState(navbarState:boolean) {
+    this.navbarActive = navbarState;
   }
 }

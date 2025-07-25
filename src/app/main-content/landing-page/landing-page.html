@@ -1,6 +1,7 @@
 <section>
     <div class="hero">
-        <div class="anne-vollmann-photo bg-img-properties">
+        <div [ngClass]="{'no-bg-img': navbarActive }"
+         class="anne-vollmann-photo bg-img-properties">
             <img class="large-screen-only" src="assets/img/anne_vollmann.png" alt="anne_vollmann">
         </div>
         <div class="headline">

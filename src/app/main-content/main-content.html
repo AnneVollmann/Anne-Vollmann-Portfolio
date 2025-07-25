@@ -1,5 +1,5 @@
-<app-landing-page [language]="this.currentLanguage" id="landingPage"></app-landing-page>
-<app-navbar (language)="setLanguage($event)"></app-navbar>
+<app-landing-page [language]="this.currentLanguage" [navbarActive]="this.navbarActive" id="landingPage"></app-landing-page>
+<app-navbar (language)="setLanguage($event)" (navbarActive)="setNavbarState($event)"></app-navbar>
 <app-about-me [language]="this.currentLanguage" id="about"></app-about-me>
 <app-my-skills [language]="this.currentLanguage" id="skills"></app-my-skills>
 <app-my-projects [language]="this.currentLanguage" id="projects"></app-my-projects>

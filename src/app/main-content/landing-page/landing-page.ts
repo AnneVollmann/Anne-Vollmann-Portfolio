@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 
 export class LandingPage {
   @Input()language = 'DE';
+  @Input()navbarActive = false;
 
   //insert correct mail
   socialBtns = [

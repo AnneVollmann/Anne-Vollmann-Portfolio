@@ -1,9 +1,9 @@
 <section>
     <div class="arrow-container arrow-top">
-        <a href="#landingPage" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
+        <a href="#top" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
             class="arrow">
-            <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_bottom">
-            <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_bottom">
+            <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_top">
+            <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_top">
         </a>
     </div>
     <h2>{{language == 'DE'? 'Kontakt aufnehmen': 'Contact me'}}</h2>
@@ -65,10 +65,10 @@
         </div>
     </form>
     <div class="arrow-container arrow-bottom">
-        <a href="#landingPage" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
+        <a href="#top" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
             class="arrow">
-            <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_bottom">
-            <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_bottom">
+            <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_top">
+            <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_top">
         </a>
     </div>
 </section>

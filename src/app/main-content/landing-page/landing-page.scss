@@ -74,6 +74,10 @@
     }
 }
 
+.no-bg-img {
+    background-image: unset !important;
+}
+
 @media (max-width: 880px) {
     .hero {
         height: unset;

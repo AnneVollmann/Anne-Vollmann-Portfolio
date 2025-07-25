@@ -1,5 +1,5 @@
 <nav>
-    <section>
+    <section class="nav-large-screen">
         <div class="logo logo-dark large-screen-only">
             <img src="assets/icons/logo_av_dark.svg" alt="anne_vollmann_logo">
             <p>A. Vollmann<br><span>developer</span></p>
@@ -23,8 +23,19 @@
             <button (click)="setLanguage('EN')"
                 [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.currentLanguage == 'EN'}">EN</button>
         </div>
-        <button class="burger-menu bg-img-properties small-screen-only">
-            <img src="assets/icons/burger_menu.svg" alt="navigation">
-        </button>
+        <button (click)="toggleBurgerMenu()" [ngClass]="{'close-menu': burgerMenuOpened}"
+            class="burger-menu bg-img-properties small-screen-only"></button>
+    </section>
+    <section *ngIf="burgerMenuOpened" class="nav-small-screen bg-img-properties small-screen-only">
+        <a *ngFor="let btn of navBtns" (click)="setSection(btn.href); toggleBurgerMenu()" href={{btn.href}}>
+            {{currentLanguage == 'DE'? btn.sectionDe: btn.sectionEn}}
+        </a>
+        <div class="language-selection" (mouseenter)="languageBtnHovered = true"
+            (mouseleave)="languageBtnHovered = false">
+            <button (click)="setLanguage('DE')"
+                [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.currentLanguage == 'DE'}">DE</button>
+            <button (click)="setLanguage('EN')"
+                [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.currentLanguage == 'EN'}">EN</button>
+        </div>
     </section>
 </nav>
