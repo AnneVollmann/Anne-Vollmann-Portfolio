@@ -6,7 +6,7 @@ import { MySkills } from "./my-skills/my-skills";
 import { MyProjects } from "./my-projects/my-projects";
 import { References } from './references/references';
 import { ContactMe } from "./contact-me/contact-me";
-import { Footer } from './footer/footer';
+import { Footer } from '../shared/components/footer/footer';
 
 @Component({
   selector: 'app-main-content',
