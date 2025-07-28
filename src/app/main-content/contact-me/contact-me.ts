@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { LanguageService } from '../../shared/services/language.service';
+import { LanguageAwareBase } from '../../shared/base/language-aware.base';
 
 @Component({
   selector: 'app-contact-me',
@@ -8,9 +10,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss'
 })
-export class ContactMe {
-  @Input()language = 'DE';
-
+export class ContactMe extends LanguageAwareBase {
   arrowBtnHovered = false;
   mailHovered = false;
   phoneHovered = false;
@@ -22,7 +22,11 @@ export class ContactMe {
   messageError = false;
   checkboxError = false;
 
-  checkInput(field: string) {}
+  constructor(languageService: LanguageService) {
+    super(languageService);
+  }
+
+  checkInput(field: string) { }
 
   onSubmit() {
     // console.log(1)

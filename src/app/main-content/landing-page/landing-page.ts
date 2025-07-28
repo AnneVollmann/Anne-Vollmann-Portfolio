@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageAwareBase } from '../../shared/base/language-aware.base';
+import { LanguageService } from '../../shared/services/language.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,9 +10,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './landing-page.scss'
 })
 
-export class LandingPage {
-  @Input()language = 'DE';
+export class LandingPage extends LanguageAwareBase {
   @Input()navbarActive = false;
+
+  constructor(languageService: LanguageService) {
+    super(languageService);
+  }
 
   //insert correct mail
   socialBtns = [

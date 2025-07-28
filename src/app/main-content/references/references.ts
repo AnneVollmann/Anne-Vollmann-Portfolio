@@ -1,6 +1,8 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ReferencesdataService } from '../../shared/services/referencesdata.service';
 import { CommonModule } from '@angular/common';
+import { LanguageAwareBase } from '../../shared/base/language-aware.base';
+import { LanguageService } from '../../shared/services/language.service';
 
 
 @Component({
@@ -9,7 +11,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './references.html',
   styleUrl: './references.scss'
 })
-export class References {
-  @Input()language = 'DE';
+export class References extends LanguageAwareBase {
   references = inject(ReferencesdataService);
+
+  constructor(languageService: LanguageService) {
+    super(languageService);
+  }
 }

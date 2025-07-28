@@ -1,5 +1,7 @@
-import { CommonModule, NgClass} from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { LanguageService } from '../../shared/services/language.service';
+import { LanguageAwareBase } from '../../shared/base/language-aware.base';
 
 @Component({
   selector: 'app-navbar',
@@ -7,25 +9,22 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss'
 })
-export class Navbar {
+export class Navbar extends LanguageAwareBase {
   navBtns = [
-    {sectionDe: 'Über mich', sectionEn: 'About me', href: '#about'},
-    {sectionDe: 'Skills', sectionEn: 'Skills', href: '#skills'},
-    {sectionDe: 'Projekte', sectionEn: 'Projects', href: '#projects'},
-    {sectionDe: 'Kontakt', sectionEn: 'Contact', href: '#contact'},
+    { sectionDe: 'Über mich', sectionEn: 'About me', href: '#about' },
+    { sectionDe: 'Skills', sectionEn: 'Skills', href: '#skills' },
+    { sectionDe: 'Projekte', sectionEn: 'Projects', href: '#projects' },
+    { sectionDe: 'Kontakt', sectionEn: 'Contact', href: '#contact' },
   ];
   currentSection = '';
   languageBtnHovered = false;
-  currentLanguage = 'DE';
   burgerMenuOpened = false;
 
-  @Output()language = new EventEmitter<string>();
-  @Output()navbarActive = new EventEmitter<boolean>();
-
-  setLanguage(language: string) {
-    this.currentLanguage = language;
-    this.language.emit(this.currentLanguage);
+  constructor(languageService: LanguageService) {
+    super(languageService);
   }
+
+  @Output() navbarActive = new EventEmitter<boolean>();
 
   setSection(section: string) {
     this.currentSection = section;
