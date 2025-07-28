@@ -31,8 +31,8 @@ export class ProjectsdataService {
             organizationEn: 'Clear naming of classes and methods, as well as understandable documentation, are essential parts of this project. Regular testing and adjustments were necessary to provide an enjoyable gaming experience.',
             groupWorkDe: '',
             groupWorkEn: '',
-            learnedDe: 'Durch die Entwicklung meines eigenen Spiels lernte ich, was es ausmacht, objekt-orientiert zu programmieren, worauf ich mich schon sehr freute. Ich stellte mir zudem selbst viele zusätzliche Aufgaben, wie verschiedene Gegnertypen oder Attacken.',
-            learnedEn: 'Through developing my own game, I learned what object-oriented programming is all about, which was something I had been looking forward to. I also gave myself many additional challenges, such as implementing different enemy types and attacks.',
+            learnedDe: 'Durch die Entwicklung meines eigenen Spiels lernte ich, was es ausmacht, objekt-orientiert zu programmieren, was mir viel Spaß macht. Ich stellte mir zudem selbst viele zusätzliche Aufgaben, wie verschiedene Gegnertypen oder Attacken.',
+            learnedEn: 'Through developing my own game, I learned what object-oriented programming is all about, which is something I enjoy a lot. I also gave myself many additional challenges, such as implementing different enemy types and attacks.',
             technologies: ['JavaScript', 'Css', 'Html'],
             img: 'assets/img/dusky_swamps.png',
             href: '',
@@ -54,5 +54,21 @@ export class ProjectsdataService {
             href: '',
             github: 'https://github.com/AnneVollmann/Pokemon-API',
         },
+        {
+            title: 'Ongoing Project',
+            aboutDe: 'Aktuell arbeite ich an einer App, die die Gewichte von Haustieren tracken kann und den Halter ggf. warnt.',
+            aboutEn: 'I am currently working on an app that tracks pet weights and notifies the owner if necessary.',
+            durationWeeks: '',
+            organizationDe: '',
+            organizationEn: '',
+            groupWorkDe: '',
+            groupWorkEn: '',
+            learnedDe: '',
+            learnedEn: '',
+            technologies: ['Angular', 'Firebase', 'Css', 'Html'],
+            img: '',
+            href: '',
+            github: '',
+        }
     ]
 }

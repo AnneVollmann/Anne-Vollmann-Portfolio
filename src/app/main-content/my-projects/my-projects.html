@@ -3,11 +3,11 @@
     <ol class="projects">
         <li *ngFor="let project of myProjects.projects; let i = index" (click)="currentProjectIndex = i"
             [ngClass]="{'current-project': this.currentProjectIndex == i}">
-            {{i + 1}}. {{project.title}}
+            <p class="large-screen-only">{{i + 1}}. {{project.title}}</p>
+            <p class="small-screen-only">{{i + 1}}. {{language == 'DE'? 'Projekt': 'Project'}}</p>
         </li>
     </ol>
-     <div class="project" 
-        [style.border-top-left-radius.px]="currentProjectIndex== 0? 0: 30"
+    <div class="project" [style.border-top-left-radius.px]="currentProjectIndex== 0? 0: 30"
         [style.border-top-right-radius.px]="currentProjectIndex== myProjects.projects.length-1? 0: 30">
         <div class="project-infos">
             <section *ngIf="myProjects.projects[currentProjectIndex].aboutDe !== ''">
@@ -59,11 +59,12 @@
             </section>
         </div>
         <div class="project-overview">
-            <div class="technologies">
+            <div *ngIf="myProjects.projects[currentProjectIndex].technologies.length !== 0" class="technologies">
                 <span>{{language == 'DE'? 'Technologien': 'Technologies'}}</span>
                 <div>
                     <img *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index"
-                        src="assets/icons/icon_{{technology.toLocaleLowerCase().replaceAll('-', '')}}.svg" alt="{{technology}}" class="large-screen-only">
+                        src="assets/icons/icon_{{technology.toLocaleLowerCase().replaceAll('-', '')}}.svg"
+                        alt="{{technology}}" class="large-screen-only">
                     <span
                         *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index"
                         class="small-screen-only">{{j == 0? ':': ','}} {{technology}}</span>
@@ -74,12 +75,20 @@
                 {{language == 'DE'? 'Dauer': 'Duration'}}: {{myProjects.projects[currentProjectIndex].durationWeeks}}
                 {{language == 'DE'? 'Wochen': 'weeks'}}
             </span>
-            <img class="project-img" src="{{myProjects.projects[currentProjectIndex].img}}"
-                alt="{{myProjects.projects[currentProjectIndex].title}} image">
+            <div class="project-img">
+                @if (myProjects.projects[currentProjectIndex].img == '') {
+                <div>
+                    <p>Coming soon...</p>
+                </div>
+                } @else {
+                <img src="{{myProjects.projects[currentProjectIndex].img}}"
+                    alt="{{myProjects.projects[currentProjectIndex].title}} image">
+                }
+            </div>
             <div class="project-btns">
-                <a href="{{myProjects.projects[currentProjectIndex].href}}" target="_blank"><button
+                <a *ngIf="myProjects.projects[currentProjectIndex].href !== ''" href="{{myProjects.projects[currentProjectIndex].href}}" target="_blank"><button
                         class="btn-primary">Live Test</button></a>
-                <a href="{{myProjects.projects[currentProjectIndex].github}}" target="_blank"><button
+                <a *ngIf="myProjects.projects[currentProjectIndex].github !== ''" href="{{myProjects.projects[currentProjectIndex].github}}" target="_blank"><button
                         class="btn-secondary">GitHub</button></a>
             </div>
         </div>
