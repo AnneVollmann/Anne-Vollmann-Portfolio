@@ -1,7 +1,7 @@
 <footer>
     <section>
         <div class="legals">
-            <a>{{language == 'DE'? 'Impressum': 'Legal notice'}}</a>
+            <a *ngIf="router.url !== '/legal-notice'" href="legal-notice">{{language == 'DE'? 'Impressum': 'Legal notice'}}</a>
             <p>© Anne Vollmann 2025</p>
         </div>
         <div class="logo logo-dark">

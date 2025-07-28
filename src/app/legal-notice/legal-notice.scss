@@ -1,0 +1,19 @@
+@import '../shared/styles/legals.scss';
+
+section {
+    min-height: calc(100vh - calc(43.25rem - clamp(18.625rem, 28.3329rem + -10.7865vw, 24.625rem)));
+
+    @media (max-width: 550px) {
+        min-height: calc(100vh - 244px);
+    }
+}
+
+.linkedin-link {
+    text-decoration: underline;
+    color: var(--color-secondary);
+
+    &:hover {
+        text-decoration: unset;
+        color: var(--color-white);
+    }
+}

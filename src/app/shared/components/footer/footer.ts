@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { LanguageAwareBase } from '../../base/language-aware.base';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -17,7 +18,7 @@ export class Footer extends LanguageAwareBase {
     { srcBase: 'assets/icons/button_linkedin', alt: 'linkedinBtn', hover: false, href: 'https://www.linkedin.com/in/anne-vollmann-38998a332/' }
   ];
 
-  constructor(languageService: LanguageService) {
+  constructor(languageService: LanguageService, public router: Router) {
     super(languageService);
   }
 }
