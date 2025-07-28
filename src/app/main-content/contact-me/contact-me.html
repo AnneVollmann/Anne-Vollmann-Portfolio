@@ -14,10 +14,10 @@
         </p>
         <div class="contact-oportunities">
             <!-- insert mail (text, href)-->
-            <a (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false" href="mailto:a@v.de">
+            <a (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false" href="vollmann.anne@web.de">
                 <img [src]="mailHovered ? 'assets/icons/icon_mail_hover.svg' : 'assets/icons/icon_mail.svg'"
                     alt="mail icon">
-                E-Mail: ...
+                E-Mail: vollmann.anne&#64;web.de
             </a>
             <a (mouseenter)="phoneHovered = true" (mouseleave)="phoneHovered = false" a href="tel:+4915734850567">
                 <img [src]="phoneHovered ? 'assets/icons/icon_phone_hover.svg' : 'assets/icons/icon_phone.svg'"
@@ -56,7 +56,7 @@
                     <div class="checkbox bg-img-properties" [class.checkbox-hovered]="checkboxHovered"
                         [class.checkbox-checked]="checkboxChecked"></div>
                     <p>{{language == 'DE'? 'Ich habe die': 'I’ve read the'}}
-                        <a href="privacy-policy"><span>{{language == 'DE'? 'Datenschutzerklärung ': 'privacy policy'}}</span></a>
+                        <a href="privacy-policy"><span>{{language == 'DE'? 'Datenschutzhinweise ': 'privacy policy'}}</span></a>
                         {{language == 'DE'? 'gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.': 'and agree to the processing of my data as outlined.'}}
                     </p>
                 </div>
