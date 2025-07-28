@@ -26,12 +26,10 @@ export class Navbar extends LanguageAwareBase {
 
   @Output() navbarActive = new EventEmitter<boolean>();
 
-  setSection(section: string) {
-    this.currentSection = section;
-  }
-
-  toggleBurgerMenu() {
-    this.burgerMenuOpened = !this.burgerMenuOpened;
+  /**
+  * This function emits the state of the burgerMenuOpened property. Thereby the landing-page is able to access the value and changes the appearence of the photo accordingly (small-screens only).
+  */
+  emitNavbarActive() {
     this.navbarActive.emit(this.burgerMenuOpened);
   }
 }

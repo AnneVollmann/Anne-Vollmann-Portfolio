@@ -16,8 +16,4 @@ import { LanguageService } from '../shared/services/language.service';
 })
 export class MainContent {
   navbarActive: boolean = false;
-
-  setNavbarState(navbarState: boolean) {
-    this.navbarActive = navbarState;
-  }
 }

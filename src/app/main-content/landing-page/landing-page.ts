@@ -11,7 +11,7 @@ import { LanguageService } from '../../shared/services/language.service';
 })
 
 export class LandingPage extends LanguageAwareBase {
-  @Input()navbarActive = false;
+  @Input() navbarActive = false;
 
   constructor(languageService: LanguageService) {
     super(languageService);
@@ -19,14 +19,9 @@ export class LandingPage extends LanguageAwareBase {
 
   //insert correct mail
   socialBtns = [
-    { srcBase: 'assets/icons/button_mail_blue', alt: 'mailBtn', hover: false, href:''},
-    { srcBase: 'assets/icons/button_github_blue', alt: 'githubBtn', hover: false, href:'https://github.com/AnneVollmann'},
-    { srcBase: 'assets/icons/button_linkedin_blue', alt: 'linkedinBtn', hover: false, href:'https://www.linkedin.com/in/anne-vollmann-38998a332/'}
+    { srcBase: 'assets/icons/button_mail_blue', alt: 'mailBtn', hover: false, href: '' },
+    { srcBase: 'assets/icons/button_github_blue', alt: 'githubBtn', hover: false, href: 'https://github.com/AnneVollmann' },
+    { srcBase: 'assets/icons/button_linkedin_blue', alt: 'linkedinBtn', hover: false, href: 'https://www.linkedin.com/in/anne-vollmann-38998a332/' }
   ];
   arrowBtnHovered = false;
-
-  //ggf. global
-  setArrowBtnHovered(hover: boolean) {
-    this.arrowBtnHovered = hover;
-  }
 }

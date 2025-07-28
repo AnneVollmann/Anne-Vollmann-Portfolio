@@ -11,7 +11,7 @@
         <ul class="menu-links large-screen-only">
             <li *ngFor="let btn of navBtns">
                 <a [ngClass]="{'btn-current-section bg-img-properties': currentSection == btn.href}"
-                    (click)="setSection(btn.href)" href={{btn.href}}>
+                    (click)="currentSection = btn.href" href={{btn.href}}>
                     {{language == 'DE'? btn.sectionDe: btn.sectionEn}}
                 </a>
             </li>
@@ -23,11 +23,11 @@
             <button (click)="languageService.setLanguage('EN')"
                 [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.language == 'EN'}">EN</button>
         </div>
-        <button (click)="toggleBurgerMenu()" [ngClass]="{'close-menu': burgerMenuOpened}"
+        <button (click)="burgerMenuOpened = !burgerMenuOpened; emitNavbarActive()" [ngClass]="{'close-menu': burgerMenuOpened}"
             class="burger-menu bg-img-properties small-screen-only"></button>
     </section>
     <section *ngIf="burgerMenuOpened" class="nav-small-screen bg-img-properties small-screen-only">
-        <a *ngFor="let btn of navBtns" (click)="setSection(btn.href); toggleBurgerMenu()" href={{btn.href}}>
+        <a *ngFor="let btn of navBtns" (click)="currentSection = btn.href; burgerMenuOpened = !burgerMenuOpened; emitNavbarActive()" href={{btn.href}}>
             {{language == 'DE'? btn.sectionDe: btn.sectionEn}}
         </a>
         <div class="language-selection" (mouseenter)="languageBtnHovered = true"

@@ -14,11 +14,7 @@ export class MyProjects extends LanguageAwareBase {
   myProjects = inject(ProjectsdataService);
   currentProjectIndex = 0;
 
-    constructor(languageService: LanguageService) {
-      super(languageService);
-    }
-
-  setCurrentProject(index: Number) {
-    this.currentProjectIndex = Number(index);
+  constructor(languageService: LanguageService) {
+    super(languageService);
   }
 }

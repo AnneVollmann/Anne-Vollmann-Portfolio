@@ -1,7 +1,7 @@
 <section>
     <h2>{{language == 'DE'? 'Meine Projekte': 'My Projects'}}</h2>
     <ol class="projects">
-        <li *ngFor="let project of myProjects.projects; let i = index" (click)="setCurrentProject(i)"
+        <li *ngFor="let project of myProjects.projects; let i = index" (click)="currentProjectIndex = i"
             [ngClass]="{'current-project': this.currentProjectIndex == i}">
             {{i + 1}}. {{project.title}}
         </li>

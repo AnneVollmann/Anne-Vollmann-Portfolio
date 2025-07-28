@@ -1,5 +1,5 @@
 <app-landing-page [navbarActive]="this.navbarActive" id="landingPage"></app-landing-page>
-<app-navbar (navbarActive)="setNavbarState($event)"></app-navbar>
+<app-navbar (navbarActive)="navbarActive = $event"></app-navbar>
 <app-about-me id="about"></app-about-me>
 <app-my-skills id="skills"></app-my-skills>
 <app-my-projects id="projects"></app-my-projects>
