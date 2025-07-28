@@ -5,8 +5,6 @@ import { Injectable } from "@angular/core";
 })
 
 export class ReferencesdataService {
-    constructor() { }
-
     references = [
         {
             name: 'Sonja Reimann-Thanisch',

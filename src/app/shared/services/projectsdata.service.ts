@@ -5,8 +5,6 @@ import { Injectable } from "@angular/core";
 })
 
 export class ProjectsdataService {
-    constructor() { }
-
     projects = [
         {
             title: 'Join',
