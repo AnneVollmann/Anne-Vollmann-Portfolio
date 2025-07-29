@@ -1,5 +1,5 @@
 import { CommonModule, NgClass } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { LanguageService } from '../../shared/services/language.service';
 import { LanguageAwareBase } from '../../shared/base/language-aware.base';
 
@@ -31,5 +31,20 @@ export class Navbar extends LanguageAwareBase {
   */
   emitNavbarActive() {
     this.navbarActive.emit(this.burgerMenuOpened);
+  }
+
+  /**
+  * This function sets the current-section to empty, when it is not already empty.
+  * That happens, when the user interacts with the page (i.e. scrolling, touching, pressing keys).
+  * Thereby no navbar-class is highlighted as the current-section.
+  */
+  @HostListener('window:wheel')
+  @HostListener('window:keydown')
+  @HostListener('window:touchstart')
+  @HostListener('window:touchmove')
+  onScroll() {
+    if (this.currentSection !== '') {
+      this.currentSection = ''
+    }
   }
 }
