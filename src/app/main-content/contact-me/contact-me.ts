@@ -19,11 +19,8 @@ export class ContactMe extends LanguageAwareBase {
   mailHovered = false;
   phoneHovered = false;
   checkboxHovered = false;
+  
   checkboxChecked = false;
-  nameError = false;
-  mailError = false;
-  messageError = false;
-  checkboxError = false;
 
   contactData = {
     name: "",
@@ -57,6 +54,7 @@ export class ContactMe extends LanguageAwareBase {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.checkboxChecked = false;
           },
           error: (error) => {
             console.error(error);
