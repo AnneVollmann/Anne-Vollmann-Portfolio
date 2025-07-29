@@ -56,8 +56,8 @@ export class ProjectsdataService {
         },
         {
             title: 'Ongoing Project',
-            aboutDe: 'Aktuell arbeite ich an einer App, die die Gewichte von Haustieren tracken kann und den Halter ggf. warnt.',
-            aboutEn: 'I am currently working on an app that tracks pet weights and notifies the owner if necessary.',
+            aboutDe: 'Aktuell arbeite ich an einer App, die die Gewichte von Haustieren tracken kann und den Halter bei Auffälligkeiten warnt.',
+            aboutEn: 'I am currently working on an app that tracks pet weights and notifies the owner in case of anomalies.',
             durationWeeks: '',
             organizationDe: '',
             organizationEn: '',

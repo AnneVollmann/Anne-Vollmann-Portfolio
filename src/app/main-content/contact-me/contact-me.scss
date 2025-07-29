@@ -53,7 +53,7 @@ form {
     padding: var(--padding-main-secondary);
 
     label span {
-        display: none;
+        color: var(--color-error);
     }
 
     .sender {
@@ -118,11 +118,6 @@ form {
 
 .label-error {
     color: var(--color-error);
-
-    >span {
-        display: contents !important;
-        color: var(--color-error);
-    }
 }
 
 @media (max-width: 550px) {
