@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { LanguageAwareBase } from '../../base/language-aware.base';
 import { Router } from '@angular/router';
+import { SocialButtonsService } from '../../services/social-buttons.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,12 +12,7 @@ import { Router } from '@angular/router';
   styleUrl: './footer.scss'
 })
 export class Footer extends LanguageAwareBase {
-  //insert correct mail
-  socialBtns = [
-    { srcBase: 'assets/icons/button_mail', alt: 'mailBtn', hover: false, href: '' },
-    { srcBase: 'assets/icons/button_github', alt: 'githubBtn', hover: false, href: 'https://github.com/AnneVollmann' },
-    { srcBase: 'assets/icons/button_linkedin', alt: 'linkedinBtn', hover: false, href: 'https://www.linkedin.com/in/anne-vollmann-38998a332/' }
-  ];
+  socialBtns = inject(SocialButtonsService).socialBtns;
 
   constructor(languageService: LanguageService, public router: Router) {
     super(languageService);

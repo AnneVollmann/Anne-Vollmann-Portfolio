@@ -12,7 +12,7 @@
                 </div>
                 <div class="social-btns">
                     <a *ngFor="let btn of socialBtns" href="{{btn.href}}" target="_blank">
-                        <img [src]="btn.hover? btn.srcBase+'_hover.svg': btn.srcBase+'.svg'" [alt]="btn.alt"
+                        <img [src]="btn.hover? btn.srcBase+'_blue_hover.svg': btn.srcBase+'_blue.svg'" [alt]="btn.alt"
                             (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
                     </a>
                 </div>
