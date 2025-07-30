@@ -19,7 +19,7 @@ export class ProjectsdataService {
             learnedEn: '',
             technologies: ['Firebase', 'Javascript', 'Css', 'Html'],
             img: 'assets/img/join.png',
-            href: '',
+            href: 'https://join.anne-vollmann.de',
             github: 'https://github.com/AnneVollmann/Join---overhauled',
         },
         {
@@ -35,7 +35,7 @@ export class ProjectsdataService {
             learnedEn: 'Through developing my own game, I learned what object-oriented programming is all about, which is something I enjoy a lot. I also gave myself many additional challenges, such as implementing different enemy types and attacks.',
             technologies: ['JavaScript', 'Css', 'Html'],
             img: 'assets/img/dusky_swamps.png',
-            href: '',
+            href: 'https://dusky-swamps.anne-vollmann.de',
             github: 'https://github.com/AnneVollmann/Dusky-Swamps',
         },
         {
@@ -51,7 +51,7 @@ export class ProjectsdataService {
             learnedEn: 'Through this project, I learned how APIs work and how to use and integrate them into projects. Working with Promises was also a key part of this application.',
             technologies: ['REST-API', 'JavaScript', 'Css', 'Html'],
             img: 'assets/img/pokemon_api.png',
-            href: '',
+            href: 'https://pokemon-api.anne-vollmann.de',
             github: 'https://github.com/AnneVollmann/Pokemon-API',
         },
         {
