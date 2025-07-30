@@ -1,5 +1,4 @@
 <?php
-
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"):
         header("Access-Control-Allow-Origin: *");
@@ -11,13 +10,13 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $json = file_get_contents('php://input');
             $params = json_decode($json);
     
-            $email = $params->email;
+            $mail = $params->mail;
             $name = $params->name;
             $message = $params->message;
     
             $recipient = 'kontakt@anne-vollmann.de';  
-            $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message ;
+            $subject = "Contact request from $mail";
+            $message = "From:" . $name ."<br>" . $mail ."<br><br>" . $message ;
     
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';
@@ -31,3 +30,4 @@ switch ($_SERVER['REQUEST_METHOD']) {
             header("Allow: POST", true, 405);
             exit;
     } 
+?>
