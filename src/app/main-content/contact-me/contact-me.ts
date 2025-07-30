@@ -19,7 +19,7 @@ export class ContactMe extends LanguageAwareBase {
   mailHovered = false;
   phoneHovered = false;
   checkboxHovered = false;
-  
+
   checkboxChecked = false;
 
   contactData = {
@@ -39,6 +39,8 @@ export class ContactMe extends LanguageAwareBase {
     },
   };
 
+  inquiryMessageShown = false;
+
   constructor(languageService: LanguageService) {
     super(languageService);
   }
@@ -49,18 +51,28 @@ export class ContactMe extends LanguageAwareBase {
   * @param {NgForm} ngForm - the contact-form
   */
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
+    if (ngForm.submitted && ngForm.form.valid && !this.inquiryMessageShown) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
             this.checkboxChecked = false;
+            this.inquirySuccessfulMessage();
           },
-          error: (error) => {
-            console.error(error);
-          },
+          error: (error) => console.error(error),
           complete: () => console.info('send post complete'),
         });
     }
+  }
+
+  /**
+  * This function sets the showInquiryMessage to true, so that the according message is visible. 
+  * After the message-animation is completed, the variable is set back to false.
+  */
+  inquirySuccessfulMessage() {
+    this.inquiryMessageShown = true;
+    setTimeout(() => {
+      this.inquiryMessageShown = false;
+    }, 5000);
   }
 }

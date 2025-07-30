@@ -1,3 +1,7 @@
+section {
+    overflow-x: clip;
+}
+
 .arrow-container {
     height: 0;
     position: relative;
@@ -120,6 +124,42 @@ form {
     color: var(--color-error);
 }
 
+.inquiry-successful {
+    height: 0;
+    position: relative;
+    right: -100vb;
+    animation: slide-in-out 5s ease-in-out;
+
+    p {
+        height: fit-content;
+        padding: var(--padding-main-secondary);
+        padding-top: calc(4rem - clamp(1.5rem, 3.1180rem + -1.7978vw, 2.5rem));
+        position: relative;
+        text-align: center;
+        color: var(--color-secondary);
+        font-size: calc(2.25rem - clamp(1rem, 1.4045rem + -0.4494vw, 1.25rem));
+        font-weight: 600;
+    }
+}
+
+@keyframes slide-in-out {
+    0% {
+        right: -100vb;
+    }
+
+    10% {
+        right: 0;
+    }
+
+    90% {
+        right: 0;
+    }
+
+    100% {
+        right: 200vb;
+    }
+}
+
 @media (max-width: 550px) {
     .arrow-top {
         display: none;
@@ -128,7 +168,7 @@ form {
     .arrow-bottom {
         width: 100%;
         height: 244px;
-        top: 0;
+        top: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -171,5 +211,9 @@ form {
                 align-self: flex-end;
             }
         }
+    }
+
+    .inquiry-successful p {
+        padding-top: 18px;
     }
 }
