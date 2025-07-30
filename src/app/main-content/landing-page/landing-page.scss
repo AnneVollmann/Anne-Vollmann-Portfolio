@@ -79,6 +79,10 @@
 }
 
 @media (max-width: 880px) {
+    section {
+        min-height: 100vh;
+    }
+
     .hero {
         height: unset;
         padding-top: 0;
