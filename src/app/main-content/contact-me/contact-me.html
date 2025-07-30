@@ -32,21 +32,24 @@
                     {{language == 'DE'? 'Name': 'Your name'}}
                     @if (!name.valid && name.touched) {<span>{{language == 'DE'? 'ist erforderlich': 'is required'}}</span>}
                 </label>
-                <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text" placeholder="{{language == 'DE'? 'Name': 'Your name'}}" required>
+                <input #name="ngModel" [(ngModel)]="contactData.name" [ngClass]="{'input-error placeholder-error': !name.valid && name.touched}" id="name" name="name" type="text" 
+                placeholder="{{language == 'DE'? 'Name': 'Your name'}} {{!name.valid && name.touched? (language == 'DE'? 'ist erforderlich':'is required') : ''}}" required>
             </div>
             <div>
                 <label for="mail" [ngClass]="{'label-error': !mail.valid && mail.touched}">
                     {{language == 'DE'? 'E-Mail-Adresse': 'Your Email'}}
                     @if (!mail.valid && mail.touched) {<span>{{language == 'DE'? 'ist erforderlich':'is required'}}</span>}
                 </label>
-                <input #mail="ngModel" [(ngModel)]="contactData.mail" id="mail" name="mail" type="text" placeholder="{{language == 'DE'? 'E-Mail-Adresse': 'Your Email'}}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <input #mail="ngModel" [(ngModel)]="contactData.mail" [ngClass]="{'input-error placeholder-error': !mail.valid && mail.touched}" id="mail" name="mail" type="text" 
+                placeholder="{{language == 'DE'? 'E-Mail-Adresse': 'Your Email'}} {{!mail.valid && mail.touched? (language == 'DE'? 'ist erforderlich':'is required') : ''}}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
             </div>
         </section>
         <label for="message" [ngClass]="{'label-error': !message.valid && message.touched}">
             {{language == 'DE'? 'Nachricht': 'Your Message'}}
             @if (!message.valid && message.touched) {<span>{{language == 'DE'? 'ist erforderlich': 'is required'}}</span>}
         </label>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="{{language == 'DE'? 'Nachricht': 'Your Message'}}" required minlength="4"></textarea>
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" [ngClass]="{'input-error placeholder-error': !message.valid && message.touched}" id="message" name="message" 
+        placeholder="{{language == 'DE'? 'Nachricht': 'Your Message'}} {{!message.valid && message.touched? (language == 'DE'? 'ist erforderlich':'is required') : ''}}" required minlength="4"></textarea>
         <div class="submit">
             <div class="privacy-policy">
                 <input type="checkbox" (click)="checkboxChecked = !checkboxChecked"

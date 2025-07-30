@@ -213,6 +213,10 @@ form {
         }
     }
 
+    .placeholder-error::placeholder {
+        color: var(--color-error);
+    }
+
     .inquiry-successful p {
         padding-top: 18px;
     }
