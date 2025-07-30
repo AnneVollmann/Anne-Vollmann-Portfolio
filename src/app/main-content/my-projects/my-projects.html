@@ -60,14 +60,14 @@
         </div>
         <div class="project-overview">
             <div *ngIf="myProjects.projects[currentProjectIndex].technologies.length !== 0" class="technologies">
-                <span>{{language == 'DE'? 'Technologien': 'Technologies'}}</span>
+                <span>{{language == 'DE'? 'Technologien:': 'Technologies:'}}</span>
                 <div>
                     <img *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index"
                         src="assets/icons/icon_{{technology.toLocaleLowerCase().replaceAll('-', '')}}.svg"
                         alt="{{technology}}" class="large-screen-only">
                     <span
                         *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index"
-                        class="small-screen-only">{{j == 0? ':': ','}} {{technology}}</span>
+                        class="small-screen-only">{{j == 0? '': ','}} {{technology}}</span>
                 </div>
             </div>
             <span *ngIf="myProjects.projects[currentProjectIndex].durationWeeks !== ''"
