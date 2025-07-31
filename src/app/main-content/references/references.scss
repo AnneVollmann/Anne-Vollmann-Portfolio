@@ -4,6 +4,7 @@ h2 {
 }
 
 .references {
+    width: fit-content;
     padding: var(--padding-main-primary);
     display: flex;
     justify-content: center;
@@ -12,9 +13,9 @@ h2 {
 }
 
 .reference {
-    width: calc(53.875rem - clamp(22.625rem, 33.7143rem + -12.3214vw, 31.25rem));
-    height: calc(49.125rem - clamp(18.125rem, 34.6786rem + -18.3929vw, 31rem));
-    padding-top: 24px;
+    width: calc(48.2rem - clamp(18.2rem, 33.3714rem + -16.8571vw, 30rem));
+    height: calc(48.2rem - clamp(18.2rem, 33.3714rem + -16.8571vw, 30rem));
+    padding-top: calc(0.75rem - clamp(0rem, 0.9643rem + -1.0714vw, 0.75rem));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,15 +42,15 @@ h2 {
     }
 
     .quote {
-        width: calc(41.5rem - clamp(17.625rem, 33.6964rem + -17.8571vw, 23.875rem));
-        height: calc(21.299999999999997rem - clamp(9.2rem, 16.6571rem + -8.2857vw, 12.1rem));
+        width: 75%;
+        height: 45%;
         font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
         text-align: center;
         overflow: auto;
     }
 
     .linkedin {
-        padding-top: 24px;
+        padding-top: calc(2.75rem - clamp(1.25rem, 1.5714rem + -0.3571vw, 1.5rem));
         color: var(--color-secondary);
         font-size: 16px;
         text-decoration: underline;
@@ -67,9 +68,5 @@ h2 {
     .references {
         justify-content: flex-start;
         padding: 0 8px 24px 8px;
-    }
-
-    .reference >* {
-        padding: 0 clamp(0rem, 1.7679rem + -3.2143vw, 1.125rem);
     }
 }
