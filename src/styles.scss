@@ -75,6 +75,7 @@
 body {
   min-height: 100vh;
   background-color: var(--color-primary);
+  overflow-x: hidden;
 }
 
 section {
@@ -151,11 +152,10 @@ textarea {
   resize: none;
 }
 
-//different for mobile (and 18px)
 label {
   padding-left: 26px;
   color: var(--color-secondary);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 input[type=checkbox] {
@@ -184,7 +184,7 @@ button {
 }
 
 .btn-primary {
-  font-size: calc(2rem - clamp(0.875rem, 1.1964rem + -0.3571vw, 1.125rem));
+  font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
   border-radius: 30px;
   background-color: var(--color-secondary);
   color: var(--color-primary);
@@ -195,7 +195,7 @@ button {
 }
 
 .btn-secondary {
-  font-size: calc(2rem - clamp(0.875rem, 1.1964rem + -0.3571vw, 1.125rem));
+  font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
   border-radius: 30px;
   border: 1px solid var(--color-secondary);
   color: var(--color-secondary);

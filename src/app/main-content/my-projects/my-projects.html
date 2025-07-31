@@ -67,7 +67,7 @@
                         alt="{{technology}}" class="large-screen-only">
                     <span
                         *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index"
-                        class="small-screen-only">{{j == 0? '': ','}} {{technology}}</span>
+                        class="technology small-screen-only">{{technology}}{{j == myProjects.projects[currentProjectIndex].technologies.length -1? '': ','}}</span>
                 </div>
             </div>
             <span *ngIf="myProjects.projects[currentProjectIndex].durationWeeks !== ''"

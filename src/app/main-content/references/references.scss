@@ -4,15 +4,15 @@ h2 {
 }
 
 .references {
-    width: fit-content;
     padding: var(--padding-main-primary);
+    gap: clamp(0.75rem, 1.7143rem + -1.0714vw, 1.5rem);
     display: flex;
     justify-content: center;
-    gap: clamp(0.75rem, 1.7143rem + -1.0714vw, 1.5rem);
     overflow-x: auto;
 }
 
 .reference {
+    min-width: calc(48.2rem - clamp(18.2rem, 33.3714rem + -16.8571vw, 30rem));
     width: calc(48.2rem - clamp(18.2rem, 33.3714rem + -16.8571vw, 30rem));
     height: calc(48.2rem - clamp(18.2rem, 33.3714rem + -16.8571vw, 30rem));
     padding-top: calc(0.75rem - clamp(0rem, 0.9643rem + -1.0714vw, 0.75rem));

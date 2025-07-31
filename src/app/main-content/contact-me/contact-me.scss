@@ -62,8 +62,8 @@ form {
 
     .sender {
         width: 100%;
-        padding-bottom: calc(2.185rem - clamp(0.875rem, 1.4343rem + -0.6214vw, 1.31rem));
-        gap: calc(2.185rem - clamp(0.875rem, 1.4343rem + -0.6214vw, 1.31rem));
+        padding-bottom: calc(2.31rem - clamp(1rem, 1.3986rem + -0.4429vw, 1.31rem));
+        gap: calc(2.31rem - clamp(1rem, 1.3986rem + -0.4429vw, 1.31rem));
         display: flex;
 
         >div {
@@ -77,7 +77,7 @@ form {
 
     .submit {
         width: 100%;
-        padding-top: calc(2.185rem - clamp(0.875rem, 1.4343rem + -0.6214vw, 1.31rem));
+        padding-top: calc(2.31rem - clamp(1rem, 1.3986rem + -0.4429vw, 1.31rem));
         display: flex;
         justify-content: space-between;
 
@@ -94,7 +94,7 @@ form {
 
                 p {
                     flex: 1;
-                    font-size: calc(1.875rem - clamp(0.875rem, 1.0357rem + -0.1786vw, 1rem));
+                    font-size: 16px;
                 }
             }
         }
