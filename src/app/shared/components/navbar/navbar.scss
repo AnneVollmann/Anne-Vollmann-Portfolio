@@ -55,7 +55,7 @@ nav {
 
 .btn-current-section {
     color: var(--color-white) !important;
-    background-image: url('../../../../public/assets/icons/bg_shape_navbar.svg');
+    background-image: url('../../../../../public/assets/icons/bg_shape_navbar.svg');
     background-size: 84px 56px !important;
 }
 
@@ -71,23 +71,23 @@ nav {
 
 .btn-current-language {
     color: var(--color-white);
-    background-image: url('../../../../public/assets/icons/bg_shape_navbar.svg');
+    background-image: url('../../../../../public/assets/icons/bg_shape_navbar.svg');
 }
 
 .burger-menu {
     width: calc(4.215rem - clamp(1.875rem, 2.6057rem + -1.3286vw, 2.34rem));
     height: calc(4.5rem - clamp(2rem, 2.7857rem + -1.4286vw, 2.5rem));
-    background-image: url('../../../../public/assets/icons/burger_menu.svg');
+    background-image: url('../../../../../public/assets/icons/burger_menu.svg');
     transition: all 0.25s ease-in-out;
 
     &:hover {
-        background-image: url('../../../../public/assets/icons/burger_menu_hover.svg');
+        background-image: url('../../../../../public/assets/icons/burger_menu_hover.svg');
         transition: all 0.25s ease-in-out;
     }
 }
 
 .close-menu {
-    background-image: url('../../../../public/assets/icons/close_menu.svg') !important;
+    background-image: url('../../../../../public/assets/icons/close_menu.svg') !important;
 }
 
 .nav-small-screen {
@@ -99,7 +99,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../../../../public/assets/icons/bg_shape_photo.svg');
+    background-image: url('../../../../../public/assets/icons/bg_shape_photo.svg');
     
     a {
         color: var(--color-primary);

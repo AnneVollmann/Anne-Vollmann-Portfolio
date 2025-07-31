@@ -58,7 +58,7 @@
                     <div class="checkbox bg-img-properties" [class.checkbox-hovered]="checkboxHovered"
                         [class.checkbox-checked]="checkboxChecked"></div>
                     <p>{{language == 'DE'? 'Ich habe die': 'I’ve read the'}}
-                        <a href="privacy-policy"><span>{{language == 'DE'? 'Datenschutzhinweise ': 'privacy policy'}}</span></a>
+                        <a routerLink="/privacy-policy"><span>{{language == 'DE'? 'Datenschutzhinweise ': 'privacy policy'}}</span></a>
                         {{language == 'DE'? 'gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.': 'and agree to the processing of my data as outlined.'}}
                     </p>
                 </div>

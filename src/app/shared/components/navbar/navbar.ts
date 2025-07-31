@@ -1,7 +1,7 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
-import { LanguageService } from '../../shared/services/language.service';
-import { LanguageAwareBase } from '../../shared/base/language-aware.base';
+import { LanguageService } from '../../services/language.service';
+import { LanguageAwareBase } from '../../base/language-aware.base';
 
 @Component({
   selector: 'app-navbar',

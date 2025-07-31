@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { LanguageAwareBase } from '../../base/language-aware.base';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { SocialButtonsService } from '../../services/social-buttons.service';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './footer.html',
   styleUrl: './footer.scss'
 })

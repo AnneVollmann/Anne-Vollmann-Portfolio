@@ -25,7 +25,7 @@ export class MySkills extends LanguageAwareBase {
 
   learningIcons = [
     { src: 'assets/icons/icon_react.svg', alt: 'React' },
-    { src: 'assets/icons/icon_vuejs.svg', alt: 'Vue:Js' }
+    { src: 'assets/icons/icon_vuejs.svg', alt: 'Vue Js' }
   ]
 
   constructor(languageService: LanguageService) {

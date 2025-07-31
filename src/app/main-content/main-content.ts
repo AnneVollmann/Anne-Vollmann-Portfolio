@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { LandingPage } from './landing-page/landing-page';
-import { Navbar } from './navbar/navbar';
+import { Navbar } from '../shared/components/navbar/navbar';
 import { AboutMe } from "./about-me/about-me";
 import { MySkills } from "./my-skills/my-skills";
 import { MyProjects } from "./my-projects/my-projects";
 import { References } from './references/references';
 import { ContactMe } from "./contact-me/contact-me";
-import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-main-content',

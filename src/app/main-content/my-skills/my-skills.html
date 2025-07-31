@@ -10,7 +10,10 @@
         <div class="learning bg-img-properties">
             <p>{{language == 'DE'? 'Zurzeit lerne ich': 'I am currently learning'}}</p>
             <div class="learning-icons bg-img-properties">
-                <img *ngFor="let icon of learningIcons" [src]="icon.src" [alt]="icon.alt">
+                <figure *ngFor="let icon of learningIcons; let i = index">
+                    <img [src]="icon.src" [alt]="icon.alt">
+                    <figcaption>{{icon.alt}}</figcaption>
+                </figure>
             </div>
             <div class="small-screen-only">
                 <a href="#contact"><button class="btn-primary">{{language == 'DE'? 'Kontakt': 'Let’s talk'}}</button></a>

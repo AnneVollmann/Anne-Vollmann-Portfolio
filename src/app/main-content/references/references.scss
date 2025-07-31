@@ -12,8 +12,8 @@ h2 {
 }
 
 .reference {
-    height: calc(43.125rem - clamp(18.125rem, 26.9643rem + -9.8214vw, 25rem));
     width: calc(53.875rem - clamp(22.625rem, 33.7143rem + -12.3214vw, 31.25rem));
+    height: calc(49.125rem - clamp(18.125rem, 34.6786rem + -18.3929vw, 31rem));
     padding-top: 24px;
     display: flex;
     flex-direction: column;
@@ -66,7 +66,7 @@ h2 {
 
     .references {
         justify-content: flex-start;
-        padding-bottom: 24px;
+        padding: 0 8px 24px 8px;
     }
 
     .reference >* {
