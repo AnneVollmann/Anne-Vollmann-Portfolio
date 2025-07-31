@@ -1,15 +1,15 @@
-@import '../shared/styles/legals.scss';
+@import '../shared/styles/legal-pages.scss';
 
 .content {
-    height: calc(100vh - 104px - calc(43.25rem - clamp(18.625rem, 28.3329rem + -10.7865vw, 24.625rem)));
+    min-height: calc(100vh - 104px - calc(43.25rem - clamp(18.625rem, 28.3329rem + -10.7865vw, 24.625rem)));
     padding: unset;
 
     @media (max-width: 880px) {
-        height: calc(100vh - 122px - calc(43.25rem - clamp(18.625rem, 28.3329rem + -10.7865vw, 24.625rem)));
+        min-height: calc(100vh - 122px - calc(43.25rem - clamp(18.625rem, 28.3329rem + -10.7865vw, 24.625rem)));
     }
 
     @media (max-width: 550px) {
-        height: calc(100vh - 366px);
+        min-height: calc(100vh - 366px);
     }
 }
 
