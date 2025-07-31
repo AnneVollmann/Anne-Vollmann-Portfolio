@@ -1,7 +1,9 @@
-<section *ngIf="language == 'DE'">
+<div class="legals-header">
     <a href="main-content" class="arrow-back">
         <img src="assets/icons/arrow_back.png" alt="back to previous page">
     </a>
+</div>
+<section *ngIf="language == 'DE'">
     <h1>Datenschutz<div class="word-break-small-screen">-<br></div>hinweise</h1>
     <h2>Verantwortlicher</h2>
     <p>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO),
@@ -99,9 +101,6 @@
 </section>
 
 <section *ngIf="language == 'EN'">
-    <a href="main-content" class="arrow-back">
-        <img src="assets/icons/arrow_back.png" alt="back to previous page">
-    </a>
     <h1>Privacy Notice</h1>
     <h2>Controller</h2>
     <p>The controller within the meaning of data protection laws, in particular the EU General Data Protection

@@ -42,7 +42,7 @@ h2 {
 
     .quote {
         width: calc(41.5rem - clamp(17.625rem, 33.6964rem + -17.8571vw, 23.875rem));
-        height: calc(19.6rem - clamp(7.5rem, 19.3286rem + -13.1429vw, 12.1rem));
+        height: calc(21.299999999999997rem - clamp(9.2rem, 16.6571rem + -8.2857vw, 12.1rem));
         font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
         text-align: center;
         overflow: auto;
@@ -71,11 +71,5 @@ h2 {
 
     .reference >* {
         padding: 0 clamp(0rem, 1.7679rem + -3.2143vw, 1.125rem);
-    }
-}
-
-@media (max-width: 550px) {
-    .reference .quote {
-        text-align: left;
     }
 }

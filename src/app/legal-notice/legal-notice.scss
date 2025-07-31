@@ -1,7 +1,8 @@
 @import '../shared/styles/legals.scss';
 
-section {
+.content {
     min-height: calc(100vh - calc(43.25rem - clamp(18.625rem, 28.3329rem + -10.7865vw, 24.625rem)));
+    padding: unset !important;
 
     @media (max-width: 550px) {
         min-height: calc(100vh - 244px);

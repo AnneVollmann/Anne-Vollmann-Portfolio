@@ -1,5 +1,10 @@
+section {
+    min-height: calc(100vh - 104px);
+    display: flex;
+}
+
 .hero {
-    height: calc(82.875rem - clamp(36.25rem, 62.9286rem + -29.6429vw, 46.625rem));
+    min-height: calc(82.875rem - clamp(36.25rem, 62.9286rem + -29.6429vw, 46.625rem));
     padding: var(--padding-main-primary);
     padding-top: calc(4.05rem - clamp(1.5rem, 4.2000rem + -3.0000vw, 2.55rem));
     gap: 8px;
@@ -10,11 +15,11 @@
 .anne-vollmann-photo {
     width: calc(65.875rem - clamp(28.75rem, 50.2857rem + -23.9286vw, 37.125rem));
     height: 100%;
-    min-height: 480px;
     padding-top: calc(2.125rem - clamp(0.75rem, 2.3571rem + -1.7857vw, 1.375rem));
     transition: all 0.5s ease-in-out;
     background-image: url('../../../../public/assets/icons/bg_shape_photo.svg');
     background-position: bottom !important;
+    align-content: flex-end;
 
     &:hover {
         transition: all 0.5s ease-in-out;
@@ -23,12 +28,15 @@
 
     img {
         height: 100%;
+        max-height: calc(97.5rem - clamp(45rem, 64.2857rem + -21.4286vw, 52.5rem));
+        max-width: 100%;
+        object-fit: cover;
     }
 }
 
 .headline {
     flex: 1;
-    padding-top: calc(2.186rem - clamp(0.5rem, 3.5497rem + -3.3886vw, 1.686rem));
+    padding-top: calc(6rem - clamp(2rem, 7.1429rem + -5.7143vw, 4rem));
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -80,10 +88,11 @@
 
 @media (max-width: 880px) {
     section {
-        min-height: 100vh;
+        min-height: calc(100vh - 122px);
     }
 
     .hero {
+        width: 100%;
         height: unset;
         padding-top: 0;
         flex-direction: column;
@@ -92,6 +101,7 @@
 
     .anne-vollmann-photo {
         width: calc(48.75rem - clamp(18.75rem, 36.4286rem + -32.1429vw, 30rem));
+        height: unset;
         min-height: calc(60rem - clamp(23.125rem, 44.7321rem + -39.2857vw, 36.875rem));
         margin-top: 12px;
         padding: 0;
