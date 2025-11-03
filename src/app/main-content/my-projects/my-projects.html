@@ -1,95 +1,113 @@
 <section>
-    <h2>{{language == 'DE'? 'Meine Projekte': 'My Projects'}}</h2>
+    <h2>
+        {{language == 'DE'? 'Meine Projekte': 'My Projects'}}
+    </h2>
     <ol class="projects">
-        <li *ngFor="let project of myProjects.projects; let i = index" (click)="currentProjectIndex = i"
-            [ngClass]="{'current-project': this.currentProjectIndex == i}">
-            <p class="large-screen-only">{{i + 1}}. {{project.title}}</p>
-            <p class="small-screen-only">{{i + 1}}. {{language == 'DE'? 'Projekt': 'Project'}}</p>
+        <li *ngFor="let project of myProjects.projects; let i = index" (click)="currentProjectIndex = i" [ngClass]="{'current-project': this.currentProjectIndex == i}">
+            <p class="large-screen-only">
+                {{i + 1}}. {{project.title}}
+            </p>
+            <p class="small-screen-only">
+                {{i + 1}}. {{language == 'DE'? 'Projekt': 'Project'}}
+            </p>
         </li>
     </ol>
-    <div class="project" [style.border-top-left-radius.px]="currentProjectIndex== 0? 0: 30"
-        [style.border-top-right-radius.px]="currentProjectIndex== myProjects.projects.length-1? 0: 30">
+    <div class="project" [style.border-top-left-radius.px]="currentProjectIndex== 0? 0: 30" [style.border-top-right-radius.px]="currentProjectIndex== myProjects.projects.length-1? 0: 30">
         <div class="project-infos">
             <section *ngIf="myProjects.projects[currentProjectIndex].aboutDe !== ''">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
-                    <p>{{language == 'DE'? 'Über das Projekt': 'About the project'}}</p>
-                    <span *ngIf="myProjects.projects[currentProjectIndex].durationWeeks !== ''"
-                        class="large-screen-only">
+                    <p>
+                        {{language == 'DE'? 'Über das Projekt': 'About the project'}}
+                    </p>
+                    <span *ngIf="myProjects.projects[currentProjectIndex].durationWeeks !== ''" class="large-screen-only">
                         {{language == 'DE'? 'Dauer': 'Duration'}}:
-                        {{myProjects.projects[currentProjectIndex].durationWeeks}} {{language == 'DE'? 'Wochen':
-                        'weeks'}}
+                        {{myProjects.projects[currentProjectIndex].durationWeeks}} 
+                        {{language == 'DE'? 'Wochen':'weeks'}}
                     </span>
                 </div>
                 <article>
-                    {{language == 'DE'? myProjects.projects[currentProjectIndex].aboutDe :
-                    myProjects.projects[currentProjectIndex].aboutEn}}
+                    {{language == 'DE'? myProjects.projects[currentProjectIndex].aboutDe : myProjects.projects[currentProjectIndex].aboutEn}}
                 </article>
             </section>
-            <section *ngIf="myProjects.projects[currentProjectIndex].organizationDe !== ''">
+            <section *ngIf="myProjects.projects[currentProjectIndex].organizationDe">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
-                    <p>{{language == 'DE'? 'So habe ich meine Arbeit organisiert': 'How i organised my work process'}}
+                    <p>
+                        {{language == 'DE'? 'So habe ich meine Arbeit organisiert': 'How i organised my work process'}}
                     </p>
                 </div>
                 <article>
-                    {{language == 'DE'? myProjects.projects[currentProjectIndex].organizationDe:
-                    myProjects.projects[currentProjectIndex].organizationEn}}
+                    {{language == 'DE'? myProjects.projects[currentProjectIndex].organizationDe : myProjects.projects[currentProjectIndex].organizationEn}}
                 </article>
             </section>
-            <section *ngIf="myProjects.projects[currentProjectIndex].groupWorkDe !== ''">
+            <section *ngIf="myProjects.projects[currentProjectIndex].groupWorkDe">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
-                    <p>{{language == 'DE'? 'Meine Erfahrungen in der Gruppenarbeit': 'My group work experience'}}</p>
+                    <p>
+                        {{language == 'DE'? 'Meine Erfahrungen in der Gruppenarbeit': 'My group work experience'}}
+                    </p>
                 </div>
                 <article>
-                    {{language == 'DE'? myProjects.projects[currentProjectIndex].groupWorkDe:
-                    myProjects.projects[currentProjectIndex].groupWorkEn}}
+                    {{language == 'DE'? myProjects.projects[currentProjectIndex].groupWorkDe : myProjects.projects[currentProjectIndex].groupWorkEn}}
                 </article>
             </section>
-            <section *ngIf="myProjects.projects[currentProjectIndex].learnedDe !== ''">
+            <section *ngIf="myProjects.projects[currentProjectIndex].learnedDe">
                 <div class="info-header">
                     <img src="assets/icons/bullet_point.svg" alt="bulletpoint">
-                    <p>{{language == 'DE'? 'Was ich gelernt habe': 'What i have learned'}}</p>
+                    <p>
+                        {{language == 'DE'? 'Was ich gelernt habe': 'What i have learned'}}
+                    </p>
                 </div>
                 <article>
-                    {{language == 'DE'? myProjects.projects[currentProjectIndex].learnedDe:
-                    myProjects.projects[currentProjectIndex].learnedEn}}
+                    {{language == 'DE'? myProjects.projects[currentProjectIndex].learnedDe : myProjects.projects[currentProjectIndex].learnedEn}}
                 </article>
             </section>
         </div>
         <div class="project-overview">
             <div *ngIf="myProjects.projects[currentProjectIndex].technologies.length !== 0" class="technologies">
-                <span>{{language == 'DE'? 'Technologien:': 'Technologies:'}}</span>
+                <span>
+                    {{language == 'DE'? 'Technologien:': 'Technologies:'}}
+                </span>
                 <div>
-                    <img *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index"
-                        src="assets/icons/icon_{{technology.toLocaleLowerCase().replaceAll('-', '')}}.svg"
-                        alt="{{technology}}" class="large-screen-only">
-                    <span
-                        *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index"
-                        class="technology small-screen-only">{{technology}}{{j == myProjects.projects[currentProjectIndex].technologies.length -1? '': ','}}</span>
+                    <img *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index" src="assets/icons/icon_{{technology.toLocaleLowerCase().replaceAll('-', '')}}.svg" alt="{{technology}}" class="large-screen-only">
+                    <span *ngFor="let technology of myProjects.projects[currentProjectIndex].technologies; let j = index" class="technology small-screen-only">
+                        {{technology}}
+                        {{j == myProjects.projects[currentProjectIndex].technologies.length -1? '': ','}}
+                    </span>
                 </div>
             </div>
-            <span *ngIf="myProjects.projects[currentProjectIndex].durationWeeks !== ''"
-                class="duration small-screen-only">
-                {{language == 'DE'? 'Dauer': 'Duration'}}: {{myProjects.projects[currentProjectIndex].durationWeeks}}
+            <span *ngIf="myProjects.projects[currentProjectIndex].durationWeeks !== ''" class="duration small-screen-only">
+                {{language == 'DE'? 'Dauer': 'Duration'}}: 
+                {{myProjects.projects[currentProjectIndex].durationWeeks}}
                 {{language == 'DE'? 'Wochen': 'weeks'}}
             </span>
             <div class="project-img">
                 @if (myProjects.projects[currentProjectIndex].img == '') {
-                <div>
-                    <p>Coming soon...</p>
-                </div>
+                    <div>
+                        <p>
+                            Coming soon...
+                        </p>
+                    </div>
                 } @else {
-                <img src="{{myProjects.projects[currentProjectIndex].img}}"
-                    alt="{{myProjects.projects[currentProjectIndex].title}} image">
+                    <img src="{{myProjects.projects[currentProjectIndex].img}}" alt="{{myProjects.projects[currentProjectIndex].title}} image">
                 }
             </div>
             <div class="project-btns">
-                <a *ngIf="myProjects.projects[currentProjectIndex].href !== ''" href="{{myProjects.projects[currentProjectIndex].href}}" target="_blank"><button
-                        class="btn-primary">Live Test</button></a>
-                <a *ngIf="myProjects.projects[currentProjectIndex].github !== ''" href="{{myProjects.projects[currentProjectIndex].github}}" target="_blank"><button
-                        class="btn-secondary">GitHub</button></a>
+                <a *ngIf="myProjects.projects[currentProjectIndex].href !== ''" href="{{myProjects.projects[currentProjectIndex].href}}" target="_blank">
+                    <button class="btn-primary">
+                        <p>
+                            Live Test
+                        </p>
+                    </button>
+                </a>
+                <a *ngIf="myProjects.projects[currentProjectIndex].github !== ''" href="{{myProjects.projects[currentProjectIndex].github}}" target="_blank">
+                    <button class="btn-secondary">
+                        <p>
+                            GitHub
+                        </p>
+                    </button>
+                </a>
             </div>
         </div>
     </div>

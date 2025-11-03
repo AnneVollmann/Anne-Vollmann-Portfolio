@@ -12,12 +12,11 @@ import { SocialButtonsService } from '../../shared/services/social-buttons.servi
 })
 
 export class LandingPage extends LanguageAwareBase {
-  @Input() navbarActive = false;
+  @Input() navbarActive: boolean = false;
   socialBtns = inject(SocialButtonsService).socialBtns;
+  arrowBtnHovered: boolean = false;
 
   constructor(languageService: LanguageService) {
     super(languageService);
   }
-
-  arrowBtnHovered = false;
 }

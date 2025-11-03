@@ -1,21 +1,29 @@
 <footer>
     <section>
         <div class="legals">
-            <a *ngIf="router.url !== '/legal-notice'"  routerLink="/legal-notice">{{language == 'DE'? 'Impressum': 'Legal notice'}}</a>
-            <p>© Anne Vollmann 2025</p>
+            <a *ngIf="router.url !== '/legal-notice'"  routerLink="/legal-notice">
+                {{language == 'DE'? 'Impressum': 'Legal notice'}}
+            </a>
+            <p>
+                © Anne Vollmann 2025
+            </p>
         </div>
         <div class="logo logo-dark">
             <img src="assets/icons/logo_av_dark.svg" alt="anne_vollmann_logo">
-            <p>A. Vollmann<br><span>developer</span></p>
+            <p>
+                A. Vollmann
+                <br>
+                <span>
+                    developer
+                </span>
+            </p>
         </div>
         <div class="social-btns">
             <a *ngFor="let btn of socialBtns" href="{{btn.href}}" target="_blank" class="btns-dark">
-                <img [src]="btn.hover? btn.srcBase+'_dark_hover.svg': btn.srcBase+'_dark.svg'" [alt]="btn.alt"
-                    (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
+                <img [src]="btn.hover? btn.srcBase+'_dark_hover.svg': btn.srcBase+'_dark.svg'" [alt]="btn.alt" (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
             </a>
             <a *ngFor="let btn of socialBtns" href="{{btn.href}}" target="_blank" class="btns-light">
-                <img [src]="btn.srcBase+'_light.svg'" [alt]="btn.alt"
-                    (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
+                <img [src]="btn.srcBase+'_light.svg'" [alt]="btn.alt" (mouseenter)="btn.hover = true" (mouseleave)="btn.hover = false">
             </a>
         </div>
     </section>

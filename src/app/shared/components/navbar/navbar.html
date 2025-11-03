@@ -2,40 +2,60 @@
     <section class="nav-large-screen">
         <div class="logo logo-dark large-screen-only">
             <img src="assets/icons/logo_av_dark.svg" alt="anne_vollmann_logo">
-            <p>A. Vollmann<br><span>developer</span></p>
+            <p>
+                A. Vollmann
+                <br>
+                <span>
+                    developer
+                </span>
+            </p>
         </div>
         <div class="logo small-screen-only">
             <img src="assets/icons/logo_av_light.svg" alt="anne_vollmann_logo">
-            <p>A. Vollmann<br><span>developer</span></p>
+            <p>
+                A. Vollmann
+                <br>
+                <span>
+                    developer
+                </span>
+            </p>
         </div>
         <ul class="menu-links large-screen-only">
             <li *ngFor="let btn of navBtns">
-                <a [ngClass]="{'btn-current-section bg-img-properties': currentSection == btn.href}"
-                    (click)="currentSection = btn.href" href={{btn.href}}>
+                <a [ngClass]="{'btn-current-section bg-img-properties': currentSection == btn.href}" (click)="currentSection = btn.href" href={{btn.href}}>
                     {{language == 'DE'? btn.sectionDe: btn.sectionEn}}
                 </a>
             </li>
         </ul>
-        <div class="language-selection large-screen-only" (mouseenter)="languageBtnHovered = true"
-            (mouseleave)="languageBtnHovered = false">
-            <button (click)="languageService.setLanguage('DE')"
-                [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.language == 'DE'}">DE</button>
-            <button (click)="languageService.setLanguage('EN')"
-                [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.language == 'EN'}">EN</button>
+        <div class="language-selection large-screen-only" (mouseenter)="languageBtnHovered = true" (mouseleave)="languageBtnHovered = false">
+            <button (click)="languageService.setLanguage('DE')" [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.language == 'DE'}">
+                <p>
+                    DE
+                </p>
+            </button>
+            <button (click)="languageService.setLanguage('EN')" [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.language == 'EN'}">
+                <p>
+                    EN
+                </p>
+            </button>
         </div>
-        <button (click)="burgerMenuOpened = !burgerMenuOpened; emitNavbarActive()" [ngClass]="{'close-menu': burgerMenuOpened}"
-            class="burger-menu bg-img-properties small-screen-only"></button>
+        <button (click)="burgerMenuOpened = !burgerMenuOpened; emitNavbarActive()" [ngClass]="{'close-menu': burgerMenuOpened}" class="burger-menu bg-img-properties small-screen-only"></button>
     </section>
     <section *ngIf="burgerMenuOpened" class="nav-small-screen bg-img-properties small-screen-only">
         <a *ngFor="let btn of navBtns" (click)="currentSection = btn.href; burgerMenuOpened = !burgerMenuOpened; emitNavbarActive()" href={{btn.href}}>
             {{language == 'DE'? btn.sectionDe: btn.sectionEn}}
         </a>
-        <div class="language-selection" (mouseenter)="languageBtnHovered = true"
-            (mouseleave)="languageBtnHovered = false">
-            <button (click)="languageService.setLanguage('DE')"
-                [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.language == 'DE'}">DE</button>
-            <button (click)="languageService.setLanguage('EN')"
-                [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.language == 'EN'}">EN</button>
+        <div class="language-selection" (mouseenter)="languageBtnHovered = true" (mouseleave)="languageBtnHovered = false">
+            <button (click)="languageService.setLanguage('DE')" [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.language == 'DE'}">
+                <p>
+                    DE
+                </p>
+            </button>
+            <button (click)="languageService.setLanguage('EN')" [ngClass]="{'btn-current-language bg-img-properties': !languageBtnHovered && this.language == 'EN'}">
+                <p>
+                    EN
+                </p>
+            </button>
         </div>
     </section>
 </nav>

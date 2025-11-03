@@ -1,26 +1,27 @@
 <section>
     <div class="arrow-container arrow-top">
-        <a href="#top" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
-            class="arrow">
+        <a href="#top" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false" class="arrow">
             <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_top">
             <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_top">
         </a>
     </div>
-    <h2>{{language == 'DE'? 'Kontakt aufnehmen': 'Contact me'}}</h2>
+    <h2>
+        {{language == 'DE'? 'Kontakt aufnehmen': 'Contact me'}}
+    </h2>
     <div class="contact-overview">
-        <span class="motivation-span">{{language == 'DE'? 'Bereit für eine Zusammenarbeit? ': 'Let us work together!'}}</span>
+        <span class="motivation-span">
+            {{language == 'DE'? 'Bereit für eine Zusammenarbeit? ': 'Let us work together!'}}
+        </span>
         <p class="open-for">
             {{language == 'DE'? 'Ich freue mich über Jobangebote und Projekte in der Softwareentwicklung. Für Herausforderungen außerhalb meiner aktuellen Skills (z.B. Backend) bin ich ebenfalls offen und erweitere meine Fähigkeiten gern.': 'Feel free to get in touch with job offers or opportunities in software development. I’m also open to challenges outside my current skill set (e.g. backend) and enjoy expanding my abilities.'}}
         </p>
         <div class="contact-oportunities">
             <a (mouseenter)="mailHovered = true" (mouseleave)="mailHovered = false" href="kontakt@anne-vollmann.de">
-                <img [src]="mailHovered ? 'assets/icons/icon_mail_hover.svg' : 'assets/icons/icon_mail.svg'"
-                    alt="mail icon">
+                <img [src]="mailHovered ? 'assets/icons/icon_mail_hover.svg' : 'assets/icons/icon_mail.svg'" alt="mail icon">
                 E-Mail: kontakt&#64;anne-vollmann.de
             </a>
             <a (mouseenter)="phoneHovered = true" (mouseleave)="phoneHovered = false" a href="tel:+4915734850567">
-                <img [src]="phoneHovered ? 'assets/icons/icon_phone_hover.svg' : 'assets/icons/icon_phone.svg'"
-                    alt="phone icon">
+                <img [src]="phoneHovered ? 'assets/icons/icon_phone_hover.svg' : 'assets/icons/icon_phone.svg'" alt="phone icon">
                 Tel.: (+49) 1573 4850567
             </a>
         </div>
@@ -30,50 +31,67 @@
             <div>
                 <label for="name" [ngClass]="{'label-error': !name.valid && name.touched}">
                     {{language == 'DE'? 'Name': 'Your name'}}
-                    @if (!name.valid && name.touched) {<span>{{language == 'DE'? 'ist erforderlich': 'is required'}}</span>}
+                    @if (!name.valid && name.touched) {
+                        <span>
+                            {{language == 'DE'? 'ist erforderlich': 'is required'}}
+                        </span>
+                    }
                 </label>
-                <input #name="ngModel" [(ngModel)]="contactData.name" [ngClass]="{'input-error placeholder-error': !name.valid && name.touched}" id="name" name="name" type="text" 
-                placeholder="{{language == 'DE'? 'Name': 'Your name'}} {{!name.valid && name.touched? (language == 'DE'? 'ist erforderlich':'is required') : ''}}" required>
+                <input #name="ngModel" [(ngModel)]="contactData.name" [ngClass]="{'input-error placeholder-error': !name.valid && name.touched}" id="name" name="name" type="text" placeholder="{{language == 'DE'? 'Name': 'Your name'}} {{!name.valid && name.touched? (language == 'DE'? 'ist erforderlich':'is required') : ''}}" required>
             </div>
             <div>
                 <label for="mail" [ngClass]="{'label-error': !mail.valid && mail.touched}">
                     {{language == 'DE'? 'E-Mail-Adresse': 'Your Email'}}
-                    @if (!mail.valid && mail.touched) {<span>{{language == 'DE'? 'ist erforderlich':'is required'}}</span>}
+                    @if (!mail.valid && mail.touched) {
+                        <span>
+                            {{language == 'DE'? 'ist erforderlich':'is required'}}
+                        </span>
+                    }
                 </label>
-                <input #mail="ngModel" [(ngModel)]="contactData.mail" [ngClass]="{'input-error placeholder-error': !mail.valid && mail.touched}" id="mail" name="mail" type="text" 
-                placeholder="{{language == 'DE'? 'E-Mail-Adresse': 'Your Email'}} {{!mail.valid && mail.touched? (language == 'DE'? 'ist erforderlich':'is required') : ''}}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <input #mail="ngModel" [(ngModel)]="contactData.mail" [ngClass]="{'input-error placeholder-error': !mail.valid && mail.touched}" id="mail" name="mail" type="text" placeholder="{{language == 'DE'? 'E-Mail-Adresse': 'Your Email'}} {{!mail.valid && mail.touched? (language == 'DE'? 'ist erforderlich':'is required') : ''}}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
             </div>
         </section>
         <label for="message" [ngClass]="{'label-error': !message.valid && message.touched}">
             {{language == 'DE'? 'Nachricht': 'Your Message'}}
-            @if (!message.valid && message.touched) {<span>{{language == 'DE'? 'ist erforderlich': 'is required'}}</span>}
+            @if (!message.valid && message.touched) {
+                <span>
+                    {{language == 'DE'? 'ist erforderlich': 'is required'}}
+                </span>
+            }
         </label>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" [ngClass]="{'input-error placeholder-error': !message.valid && message.touched}" id="message" name="message" 
-        placeholder="{{language == 'DE'? 'Nachricht': 'Your Message'}} {{!message.valid && message.touched? (language == 'DE'? 'ist erforderlich':'is required') : ''}}" required minlength="4"></textarea>
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" [ngClass]="{'input-error placeholder-error': !message.valid && message.touched}" id="message" name="message" placeholder="{{language == 'DE'? 'Nachricht': 'Your Message'}} {{!message.valid && message.touched? (language == 'DE'? 'ist erforderlich':'is required') : ''}}" required minlength="4"></textarea>
         <div class="submit">
             <div class="privacy-policy">
-                <input type="checkbox" (click)="checkboxChecked = !checkboxChecked"
-                    (mouseenter)="checkboxHovered = true" (mouseleave)="checkboxHovered = false" required>
+                <input type="checkbox" (click)="checkboxChecked = !checkboxChecked" (mouseenter)="checkboxHovered = true" (mouseleave)="checkboxHovered = false" required>
                 <div>
-                    <div class="checkbox bg-img-properties" [class.checkbox-hovered]="checkboxHovered"
-                        [class.checkbox-checked]="checkboxChecked"></div>
-                    <p>{{language == 'DE'? 'Ich habe die': 'I’ve read the'}}
-                        <a routerLink="/privacy-policy"><span>{{language == 'DE'? 'Datenschutzhinweise ': 'privacy policy'}}</span></a>
+                    <div class="checkbox bg-img-properties" [class.checkbox-hovered]="checkboxHovered" [class.checkbox-checked]="checkboxChecked"></div>
+                    <p>
+                        {{language == 'DE'? 'Ich habe die': 'I’ve read the'}}
+                        <a routerLink="/privacy-policy">
+                            <span>
+                                {{language == 'DE'? 'Datenschutzhinweise ': 'privacy policy'}}
+                            </span>
+                        </a>
                         {{language == 'DE'? 'gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.': 'and agree to the processing of my data as outlined.'}}
                     </p>
                 </div>
             </div>
-            <button class="btn-secondary" [disabled]="checkboxChecked? false: true">{{language == 'DE'? 'Abschicken': 'Send'}}</button>
+            <button class="btn-secondary" [disabled]="checkboxChecked? false: true">
+                <p>
+                    {{language == 'DE'? 'Abschicken': 'Send'}}
+                </p>
+            </button>
         </div>
     </form>
     <div *ngIf="inquiryMessageShown" class="inquiry-successful">
-        <p>{{language == 'DE'? 'Vielen Dank für die Anfrage!': 'Thank you for your inquiry!'}}
+        <p>
+            {{language == 'DE'? 'Vielen Dank für die Anfrage!': 'Thank you for your inquiry!'}}
             <br>
-            {{language == 'DE'? 'Die Nachricht ist eingegangen und ich melde mich zeitnah zurück.': 'I’ve received your message and will get back to you shortly.'}}</p>
+            {{language == 'DE'? 'Die Nachricht ist eingegangen und ich melde mich zeitnah zurück.': 'I’ve received your message and will get back to you shortly.'}}
+        </p>
     </div>
     <div class="arrow-container arrow-bottom">
-        <a href="#top" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false"
-            class="arrow">
+        <a href="#top" (mouseenter)="arrowBtnHovered = true" (mouseleave)="arrowBtnHovered = false" class="arrow">
             <img *ngIf="!arrowBtnHovered" src="assets/icons/arrow.svg" alt="scroll_to_top">
             <img *ngIf="arrowBtnHovered" src="assets/icons/arrow_hover.svg" alt="scroll_to_top">
         </a>

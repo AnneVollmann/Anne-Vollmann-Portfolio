@@ -13,15 +13,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contact-me.scss'
 })
 export class ContactMe extends LanguageAwareBase {
-
   http = inject(HttpClient);
 
-  arrowBtnHovered = false;
-  mailHovered = false;
-  phoneHovered = false;
-  checkboxHovered = false;
-
-  checkboxChecked = false;
+  arrowBtnHovered: boolean = false;
+  mailHovered: boolean = false;
+  phoneHovered: boolean = false;
+  checkboxHovered: boolean = false;
+  checkboxChecked: boolean = false;
+  inquiryMessageShown: boolean = false;
 
   contactData = {
     name: "",
@@ -39,8 +38,6 @@ export class ContactMe extends LanguageAwareBase {
       },
     },
   };
-
-  inquiryMessageShown = false;
 
   constructor(languageService: LanguageService) {
     super(languageService);
@@ -72,8 +69,6 @@ export class ContactMe extends LanguageAwareBase {
   */
   inquirySuccessfulMessage() {
     this.inquiryMessageShown = true;
-    setTimeout(() => {
-      this.inquiryMessageShown = false;
-    }, 5000);
+    setTimeout(() => this.inquiryMessageShown = false, 5000);
   }
 }

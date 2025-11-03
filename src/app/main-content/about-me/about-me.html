@@ -1,21 +1,31 @@
 <section>
-    <h2>{{language == 'DE'? 'Über mich': 'About me'}}</h2>
+    <h2>
+        {{language == 'DE'? 'Über mich': 'About me'}}
+    </h2>
     <div class="content">
         <div class="location-types">
             <div>
                 <img src="assets/icons/location.png" alt="location">
                 <p>
-                    <span>{{language == 'DE'? 'Ich wohne': 'I am'}} </span>
+                    <span>
+                        {{language == 'DE'? 'Ich wohne': 'I am'}}
+                    </span>
                     {{language == 'DE'? 'in Dresden': 'located in Dresden'}} 
-                    <span class="ellipsis">...</span>
+                    <span class="ellipsis">
+                        ...
+                    </span>
                 </p>
             </div>
             <div>
                 <img src="assets/icons/remote.png" alt="remote">
                 <p>
-                    <span>{{language == 'DE'? 'Ich arbeite': 'I am'}} </span>
+                    <span>
+                        {{language == 'DE'? 'Ich arbeite': 'I am'}}
+                    </span>
                     {{language == 'DE'? 'auch remote': 'open to work remote'}} 
-                    <span class="ellipsis">...</span>
+                    <span class="ellipsis">
+                        ...
+                    </span>
                 </p>
             </div>
         </div>
@@ -25,7 +35,11 @@
                 <br>
                 {{language == 'DE'? 'An der Softwareentwicklung liebe ich besonders die immer neuen Herausforderungen und das Erarbeiten cleverer Lösungen in anspruchsvollen Software-Projekten.':'What I love most about software development is the constantly new challenges as well as crafting smart solutions in demanding software projects.'}}
             </p>
-            <a class="large-screen-only" href="#contact"><button class="btn-secondary">{{language == 'DE'? 'Kontakt': 'Let’s talk'}}</button></a>
+            <a class="large-screen-only" href="#contact">
+                <button class="btn-secondary">
+                    <p>{{language == 'DE'? 'Kontakt': 'Let’s talk'}}</p>
+                </button>
+            </a>
         </article>
     </div>
 </section>

@@ -12,7 +12,7 @@ import { LanguageAwareBase } from '../../shared/base/language-aware.base';
 })
 export class MyProjects extends LanguageAwareBase {
   myProjects = inject(ProjectsdataService);
-  currentProjectIndex = 0;
+  currentProjectIndex: number = 0;
 
   constructor(languageService: LanguageService) {
     super(languageService);
