@@ -1,62 +1,64 @@
 @font-face {
   font-display: swap;
-  font-family: 'Anta';
+  font-family: "Anta";
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/Anta-Regular.ttf') format('truetype');
+  src: url("/assets/fonts/Anta-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'JosefinSans';
+  font-family: "JosefinSans";
   font-style: normal;
   font-weight: 300;
-  src: url('/assets/fonts/JosefinSans-Light.ttf') format('truetype');
+  src: url("/assets/fonts/JosefinSans-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'JosefinSans';
+  font-family: "JosefinSans";
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/JosefinSans-Regular.ttf') format('truetype');
+  src: url("/assets/fonts/JosefinSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'JosefinSans';
+  font-family: "JosefinSans";
   font-style: normal;
   font-weight: 500;
-  src: url('/assets/fonts/JosefinSans-Medium.ttf') format('truetype');
+  src: url("/assets/fonts/JosefinSans-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'JosefinSans';
+  font-family: "JosefinSans";
   font-style: normal;
   font-weight: 600;
-  src: url('/assets/fonts/JosefinSans-SemiBold.ttf') format('truetype');
+  src: url("/assets/fonts/JosefinSans-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'JosefinSans';
+  font-family: "JosefinSans";
   font-style: normal;
   font-weight: 700;
-  src: url('/assets/fonts/JosefinSans-Bold.ttf') format('truetype');
+  src: url("/assets/fonts/JosefinSans-Bold.ttf") format("truetype");
 }
 
 :root {
-  --color-primary: #262E34;
-  --color-secondary: #89BCD9;
+  --color-primary: #262e34;
+  --color-secondary: #89bcd9;
   --color-tertiary: #2d3840;
-  --color-white: #F8F5EC;
+  --color-white: #f8f5ec;
   --color-grey: #3f464a;
   --color-lightgrey: #8f9190;
-  --color-error: #E44C36;
+  --color-error: #e44c36;
 
-  --padding-main-primary: 0 calc(8.312999999999999rem - clamp(1.5rem, 10.0963rem + -9.5515vw, 6.813rem));
-  --padding-main-secondary: 0 calc(19.625rem - clamp(1.5rem, 28.3989rem + -29.8876vw, 18.125rem));
+  --padding-main-primary: 0
+    calc(8.312999999999999rem - clamp(1.5rem, 10.0963rem + -9.5515vw, 6.813rem));
+  --padding-main-secondary: 0
+    calc(19.625rem - clamp(1.5rem, 28.3989rem + -29.8876vw, 18.125rem));
 
   --fontsize-h1: calc(8.5rem - clamp(3rem, 7.0449rem + -4.4944vw, 5.5rem));
   --fontsize-h2: calc(5.75rem - clamp(2rem, 4.8315rem + -3.1461vw, 3.75rem));
@@ -67,7 +69,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: var(--color-white);
-  font-family: 'JosefinSans';
+  font-family: "JosefinSans";
   font-weight: 400;
   line-height: 1.2;
 }
@@ -110,14 +112,14 @@ a {
   cursor: pointer;
 }
 
-input[type=text],
+input[type="text"],
 textarea {
   height: 60px;
   padding: 24px;
   border: 1px solid var(--color-secondary);
   border-radius: 30px;
   background-color: unset;
-  font-size: calc(2.125rem - clamp(1rem, 1.1620rem + -0.1852vw, 1.125rem));
+  font-size: calc(2.125rem - clamp(1rem, 1.162rem + -0.1852vw, 1.125rem));
 
   &:hover {
     cursor: pointer;
@@ -158,7 +160,7 @@ label {
   font-size: 16px;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   width: 24px !important;
   height: 24px !important;
   appearance: none;
@@ -174,7 +176,10 @@ button {
 
   &:disabled {
     border-color: var(--color-lightgrey);
-    color: var(--color-lightgrey);
+
+    p {
+      color: var(--color-lightgrey);
+    }
 
     &:hover {
       background-color: unset !important;
@@ -187,7 +192,9 @@ button {
   font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
   border-radius: 30px;
   background-color: var(--color-secondary);
-  color: var(--color-primary);
+  p {
+    color: var(--color-primary);
+  }
 
   &:hover {
     background-color: var(--color-white);
@@ -198,7 +205,10 @@ button {
   font-size: calc(2.125rem - clamp(1rem, 1.1607rem + -0.1786vw, 1.125rem));
   border-radius: 30px;
   border: 1px solid var(--color-secondary);
-  color: var(--color-secondary);
+
+  p {
+    color: var(--color-secondary);
+  }
 
   &:hover {
     background-color: var(--color-grey);
@@ -217,14 +227,14 @@ button {
   align-items: center;
 
   img {
-    height: calc(4.25rem - clamp(1.875rem, 2.6840rem + -0.8989vw, 2.375rem));
+    height: calc(4.25rem - clamp(1.875rem, 2.684rem + -0.8989vw, 2.375rem));
     object-fit: fill;
   }
 
   p {
     padding-top: 6px;
     text-align: center;
-    font-family: 'Anta';
+    font-family: "Anta";
     font-size: calc(2.125rem - clamp(1rem, 1.2022rem + -0.2247vw, 1.125rem));
     line-height: 1;
     text-wrap: nowrap;
