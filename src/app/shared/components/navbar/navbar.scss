@@ -23,7 +23,8 @@ nav {
 .nav-large-screen {
   width: 100%;
   height: 100%;
-  padding: 0 calc(8.312999999999999rem - clamp(1.5rem, 15.162rem + -15.18vw, 6.813rem));
+  padding: 0
+    calc(8.312999999999999rem - clamp(1.5rem, 15.162rem + -15.18vw, 6.813rem));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,6 +115,10 @@ nav {
   a {
     color: var(--color-primary);
     font-size: 22px;
+
+    &:hover {
+      color: var(--color-white);
+    }
   }
 }
 
