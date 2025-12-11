@@ -1,13 +1,15 @@
 export type Technology = 
-    'Angular' | 
-    'Css' | 
-    'Firebase'| 
+    'Angular' |
+    'Bootstrap' |
+    'Css' |
+    'Firebase'|
     'Git' |
-    'Html' | 
-    'JavaScript' | 
+    'Html' |
+    'JavaScript' |
     'Material Design' |
     'React'|
-    'REST-API' | 
+    'REST-API' |
     'Scrum' |
+    'Tailwind' |
     'TypeScript' |
     'Vue Js'
