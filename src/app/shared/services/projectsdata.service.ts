@@ -33,7 +33,7 @@ export class ProjectsdataService {
             groupWorkEn: 'Due to the complexity of the project, good organization was essential. We met online at least twice a week to discuss the progress of our tasks and clarify any questions. Together, we merged our GitHub branches and assigned new tasks to each other, ensuring a smooth and efficient workflow throughout the project.',
             learnedDe: 'Dieses Projekt hat mich enorm viel gelehrt, was das Arbeiten mit Angular und Firebase angeht. Auch Performance-Optimierung, die Erstellung wiederverwendbarer Komponenten und das Schaffen einer sinnvollen Projekt-Struktur, waren wichtige Lernaspekte für mich.',
             learnedEn: 'This project taught me a great deal about working with Angular and Firebase. Performance optimization, creating reusable components, and developing a well-organized project structure were also key learning experiences for me.',
-            technologies: ['Angular', 'Firebase', 'TypeScript', 'Css', 'Html'],
+            technologies: ['Angular', 'Firebase', 'TypeScript', 'Tailwind', 'Css', 'Html'],
             img: 'assets/img/da-bubble.png',
             href: 'https://da-bubble.anne-vollmann.de',
             github: 'https://github.com/AnneVollmann/DABubble',
@@ -73,14 +73,12 @@ export class ProjectsdataService {
             durationWeeks: '',
             organizationDe: '',
             organizationEn: '',
-            groupWorkDe: '',
-            groupWorkEn: '',
             learnedDe: '',
             learnedEn: '',
-            technologies: ['React'],
+            technologies: ['React', 'Firebase', 'Bootstrap', 'Css', 'Html'],
             img: '',
-            href: '',
-            github: '',
+            href: 'https://pet-weight-tracker.anne-vollmann.de',
+            github: 'https://github.com/AnneVollmann/pet-weight-tracker',
         }
     ]
 }
