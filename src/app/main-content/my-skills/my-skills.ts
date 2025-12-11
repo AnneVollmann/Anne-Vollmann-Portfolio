@@ -27,6 +27,8 @@ export class MySkills extends LanguageAwareBase {
     { src: 'assets/icons/icon_firebase.svg', alt: 'Firebase' },
     { src: 'assets/icons/icon_git.svg', alt: 'Git' },
     { src: 'assets/icons/icon_materialdesign.svg', alt: 'Material Design' },
+    { src: 'assets/icons/icon_tailwind.svg', alt: 'Tailwind' },
+    { src: 'assets/icons/icon_bootstrap.svg', alt: 'Bootstrap' },
     { src: 'assets/icons/icon_scrum.svg', alt: 'Scrum' }
   ]
 
